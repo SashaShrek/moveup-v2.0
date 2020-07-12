@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="Styles/Main.css">
+        <script src="http://188.227.86.17/React/react.dev.js"></script>
+        <script src="http://188.227.86.17/React/react-dom.dev.js"></script>
+        <script src="http://188.227.86.17/React/babel.js"></script>
+        <script src="http://188.227.86.17/jQuery/jQuery.js"></script>
+        <link rel="shortcut icon" href="Images/logo.png" type="image/png">
+        <title>Создание сайтов на заказ</title>
+    </head>
+    <body onload="new Loader().Load()">
+        <div id="root"></div>
+        <script type="text/babel">
+        //header
+            var hdiv = <div>
+                    <img src="Images/logo.png" alt="Logo"/>
+                    <p className="title">MOVEUP</p>
+                    <button>Главная</button>
+                    <button>Соглашение</button>
+                    <button>Корзина</button>
+                    <button>Авторизация</button>
+                </div>;
+            
+            var hder = <header>{hdiv}</header>;
+            class Header extends React.Component{
+                render(){
+                    return hder;
+                }
+            };
+        //main
+            var albom = <div>
+                    <div className="imgsSlide">
+                        <img src="Images/onemain.jpg" alt=""/>
+                    </div>
+                    <div className="Gallery">
+                        <img src="Images/onemain.jpg" alt=""/>
+                        <img src="Images/twomain.jpg" alt=""/>
+                    </div>
+                </div>;
+            var text = <div className="text">
+                    <p className="titleText">MOVEUP - это новое community в сфере разработки сайтов</p>
+                    <p className="description">Мы используем различные технологии для достижения цели. 
+                        Простота использования, удобство и минимализм - вот основные принципы нашей работы. 
+                        Клиент находится в центре нашей бизнес-модели. Поэтому качество услуг и быстрота реагирования 
+                        на запросы клиента для нас являются одними из основных задач при выполнении заказов.</p>
+                </div>;
+            var mdiv = <div>
+                    {albom}
+                    {text}
+                </div>;
+            var mn = <main>{mdiv}</main>;
+            class Main extends React.Component{
+                render(){
+                    return mn
+                }
+            };
+        //footer
+            class Footer extends React.Component{
+
+            };
+            const rdiv = <div>
+                    <Header/>
+                    <Main/>
+                </div>;
+            ReactDOM.render(
+                rdiv,
+                document.getElementById("root")
+            )
+
+        </script>
+        <script type="text/javascript" src="Scripts/Main.js"></script>
+    </body>
+</html>

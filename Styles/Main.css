@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+}
+/*header*/
+header{
+    width: 100%;
+    box-shadow: 0 0 5px;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 2;
+}
+.title{
+    font-size: 150%;
+    display: inline-block;
+    vertical-align: middle;
+}
+header > div > button{
+    margin: auto;
+    background: transparent;
+    outline: none;
+    vertical-align: middle;
+    border: none;
+    font-size: 120%;
+    color: dimgray;
+    cursor: pointer;
+    transition: 0.2s;
+}
+header > div > button:hover{ opacity: 0.6; }
+header > div > img:hover{ transform: rotateY(180deg); }
+
+
+main{
+    width: 100%;
+    min-height: 100vh;
+}
+.imgsSlide > img{ width: 100%; height: 50vh; border-radius: 15px; transition: 1s;}
+.Gallery > img { width: 25%; border-radius: 15px; height: 15vh; cursor: pointer;}
+.text{
+    margin-top: 5%;
+}
+.titleText{
+    color: dimgray;
+    font-size: 170%;
+    text-align: center;
+}
+.description{
+    color: dimgray;
+    font-size: 130%;
+}
+
+@media screen and (min-width:769px){
+    /*header*/
+    header > div{
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        color: dimgray;
+        display: flex;
+    }
+    header > div > img{ width: 5vh; height: 5vh; vertical-align: middle; margin: auto; transition: 1s;}
+
+    /*main*/
+    main > div{
+        margin-top: calc(10vh + 2%);
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+
+
+@media screen and (max-device-width:480px) and (orientation: portrait){
+
+}

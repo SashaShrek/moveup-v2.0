@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="yandex-verification" content="d896f0ca8c76891f" />
+        <meta name = "description" content = "Создание сайтов не дорого, качественно, индивидуальный подход">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="StyleMain.css">
+        <link rel="shortcut icon" href="logo.png" type="image/png">
+        <title>MOVEUP Создание сайтов</title>
+        <style media="screen">
+        @media screen and (max-device-width:480px) and (orientation: portrait){
+          #headerD, #menup{
+            display:none;
+          }
+          #hDm{
+            margin-top: 1%;
+            width: 80%;
+            background: white;
+            outline: none;
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          #menu{
+            vertical-align: middle;
+          }
+          #mainD{
+              opacity: 0;
+              font-size: 18px;
+              margin-top: 3%;
+              overflow: hidden;
+              width: 80%;
+              height: 20vh;
+              margin-left: auto;
+              margin-right: auto;
+              box-sizing: border-box;
+          }
+          #d0, #d1, #d2, #d3, #d4, #d5, #d6, #d7{
+            width: 100%;
+            display: block;
+          }
+          #policy{
+            vertical-align: middle;
+            display: block;
+          }
+          #cont{
+            display: none;
+          }
+        }
+        @media screen and (min-width:769px){
+          #hDm, #menup{
+            display: none;
+          }
+          #d0, #d4{
+            width: 20%;
+            display: inline-block;
+            cursor: pointer;
+          }
+          #d1, #d2, #d3, #d5, #d6, #d7{
+            width: 20%;
+            display: inline-block;
+            margin-left: 5%;
+            vertical-align: top;
+            cursor: pointer;
+          }
+          #policy{
+            vertical-align: middle;
+            margin-left: 2%;
+            display: inline-block;
+          }
+          #cont{
+            text-align: left;
+            display: inline-block;
+            vertical-align: top;
+          }
+          #cont1{
+            display: none;
+          }
+        }
+        @media screen and (min-device-width:481px){
+          #hDm, #menup{
+            display: none;
+          }
+          #d0, #d4{
+            width: 20%;
+            display: inline-block;
+            cursor: pointer;
+          }
+          #d1, #d2, #d3, #d5, #d6, #d7{
+            width: 20%;
+            display: inline-block;
+            margin-left: 5%;
+            vertical-align: top;
+            cursor: pointer;
+          }
+          #policy{
+            vertical-align: middle;
+            margin-left: 2%;
+            display: inline-block;
+          }
+          #cont{
+            text-align: left;
+            display: inline-block;
+            vertical-align: top;
+          }
+        }
+        </style>
+    </head>
+    <body id="bd" link="black" vlink="black" alink="black" onload="loadMain()">
+        <div id="hDm">
+          <sub id="name_header0">MOVEUP</sub>
+          <sub id="menu" onclick="ShowMenu()">Меню ▼</sub>
+        </div>
+        <div id="menup">
+          <ul>
+            <p><a href="hoster_block.html">Главная</a></p>
+            <p><a href="Help.html">Соглашение</a></p>
+            <p><a href="Bag.html">Корзина</a></p>
+            <p><a id="entr1" href="Enter.html">Вход</a></p>
+            <p><a id="exit1" onclick="Exit()" style="display: none; cursor: pointer;">Выход</a></p>
+          </ul>
+        </div>
+        <div id="headerD">
+            <sub id="name_header1">MOVEUP</sub>
+            <a href="hoster_block.html">Главная</a>
+            <a href="Help.html">Соглашение</a>
+            <a href="Bag.html">Корзина</a>
+            <a id="entr" href="Enter.html">Вход</a>
+            <a id="exit" onclick="Exit()" style="display: none; cursor: pointer;">Выход</a>
+        </div>
+        <p id="name" onclick="go()" onmouseover="OColor('name', 1)" onmouseout="OColor('name', 0)" style="font-size: 28px; text-align:center; cursor: pointer;"></p>
+        <u><p id="log" onclick="go()" style="font-size: 28px; text-align:center; cursor: pointer; display:none;"></p></u>
+        <div id="mainD">
+            <img id="one" src="onemain.jpg">
+            <img id="two" src="twomain.jpg">
+        </div>
+        <div id="main">
+
+            <p style="font-size: 32px;">MOVEUP - это новое community в сфере разработки сайтов.</p>
+            <p style="text-align: justify;">Мы используем различные технологии для достижения цели. Простота использования, удобство и минимализм - вот основные принципы нашей работы.
+                Клиент находится в центре нашей бизнес-модели. Поэтому качество услуг и быстрота реагирования на запросы клиента для нас являются одними из основных задач при выполнении заказов.
+                </p>
+
+                <hr>
+                <br>
+                <br>
+            <div id="d0" onclick="ShowOne('onep', 'textone')">
+                <img width="100%" src="shop.jpg">
+                <p style="text-align: justify;"><b>Интернет-магазин</b> – сайт, торгующий товарами/услугами посредством сети Интернет. Позволяет пользователям on-line, в своем браузере или через мобильное приложение сформировать заказ на покупку, выбрать способ оплаты и доставки заказа, оплатить заказ.</p>
+                <p style="cursor: pointer; color: cornflowerblue;" id="textone">Подробнее ></p>
+            </div>
+            <div id="d1" onclick="ShowOne('twop', 'texttwo')">
+                <img width="100%" src="vizit.jpg">
+                <p style="text-align: justify;"><b>Сайт-визитка</b> – небольшой сайт, как правило, состоящей из одной web-страницы и содержащий основную информацию об организации, частном лице, компании, товарах или услугах, прейскуранты, контактные данные.</p>
+                <p style="cursor: pointer; color: cornflowerblue;" id="texttwo">Подробнее ></p>
+            </div>
+            <div id="d2" onclick="ShowOne('threep', 'textthree')">
+                <img width="100%" src="catalog.jpg">
+                <p style="text-align: justify;"><b>Сайт-каталог</b> – сайт, на котором представлена полная информация о компании и электронный каталог ее товаров/услуг.</p>
+                <p style="cursor: pointer; color: cornflowerblue;" id="textthree">Подробнее ></p>
+            </div>
+            <div id="d3" onclick="ShowOne('fourp', 'textfour')">
+                <img width="100%" src="coop.jpg">
+                <p style="text-align: justify;"><b>Корпоративный сайт</b> – сайт компании, на котором размещена подробная информация о компании-владельце, об услугах, сервисах, продуктах, открытых вакансиях, событиях в жизни компании. Сайт имеет сложную архитектуру и наличие корпоративного стиля компании. Содержит различные функциональные инструменты для работы с контентом (блоги, форумы, календарь событий).</p>
+                <p style="cursor: pointer; color: cornflowerblue;" id="textfour">Подробнее ></p>
+            </div>
+            <br>
+
+            <!--......-->
+
+            <div id="onep">
+                <hr color="cornflowerblue">
+                <p style="font-size: 32px;">Назначение:</p>
+                <p style="text-align: justify;"><b>Интернет-магазин</b> - это специализированный вид бизнеса, основанный на дистанционном обслуживании и дающий возможность продавцу и покупателю совершать сделки по покупке/продаже того или иного вида товаров посредством сети Интернет. </p>
+                <p style="text-align: justify;">Магазин виртуального типа, специализированный интерактивный web-сайт, рекламирующий товар или услугу, принимающий заказы на покупку, предлагающий пользователю выбор варианта расчета, способа получения заказа и осуществление оплаты on-line.</p>
+                <p style="font-size: 32px;">Стоимость: от 30000р.</p>
+                <p id="text_order0" style="text-align:justify;">Чтобы сделать заказ, Вам необходимо авторизироваться во вкладке "Вход"</p>
+                <div style="text-align: center;">
+                    <form method="GET" action="Order.html">
+                        <input type="hidden" name="typeOrder" value="Интернет-магазин">
+                        <input type="hidden" name="imageOrder" value="shop.jpg">
+                        <input type="hidden" name="priceOrder" value="от 30 000 р.">
+                        <input id="butMoveToBag0" type="submit" style="margin-left: auto; margin-right: auto; font-size: 28px; border: 1px solid transparent; background: none; color: cornflowerblue; cursor: pointer;" value="Заказать >">
+                    </form>
+                </div>
+            </div>
+            <div id="twop">
+                <hr color="cornflowerblue">
+                <p style="font-size: 32px;">Назначение:</p>
+                <p style="text-align: justify;"><b>Сайт-визитка</b> – сайт имиджевой рекламы, вызывающий позитивные эмоции и формирующий доверие клиента.</p>
+                <p style="text-align: justify;">Основная задача сайта-визитки познакомить клиента с компанией. Сайт содержит значительные объемы графики, анимации, Flash-технологий. В функционал входят возможности обратной связи.</p>
+                <p style="font-size: 32px;">Стоимость: от 20000р.</p>
+                <p id="text_order1" style="text-align:justify;">Чтобы сделать заказ, Вам необходимо авторизироваться во вкладке "Вход"</p>
+                <div style="text-align: center;">
+                    <form method="GET" action="Order.html">
+                        <input type="hidden" name="typeOrder" value="Сайт-визитка">
+                        <input type="hidden" name="imageOrder" value="vizit.jpg">
+                        <input type="hidden" name="priceOrder" value="от 20 000 р.">
+                        <input id="butMoveToBag1" type="submit" style="margin-left: auto; margin-right: auto; font-size: 28px; border: 1px solid transparent; background: none; color: cornflowerblue; cursor: pointer;" value="Заказать >">
+                    </form>
+                </div>
+            </div>
+            <div id="threep">
+                <hr color="cornflowerblue">
+                <p style="font-size: 32px;">Назначение:</p>
+                <p style="text-align: justify;"><b>Сайт-каталог</b> - сайт, который создается для увеличения количества продаж товаров и услуг за счет доступа к их полному описанию, иллюстрации, ценам.</p>
+                <p style="text-align: justify;">Рекламный сайт с постоянно обновляющейся информацией о товарах/услугах. Содержит прайс-листы, фотографии и описание продукции. Является удобным ресурсом для клиентов, которые территориально отдалены от компании и могут изучить продукцию на сайте, не проводя много времени в торговом зале. Покупка товаров/услуг осуществляется путем обращения покупателя в компанию по указанным на сайте контактам.</p>
+                <p style="font-size: 32px;">Стоимость: от 25000р.</p>
+                <p id="text_order2" style="text-align:justify;">Чтобы сделать заказ, Вам необходимо авторизироваться во вкладке "Вход"</p>
+                <div style="text-align: center;">
+                    <form method="GET" action="Order.html">
+                        <input type="hidden" name="typeOrder" value="Сайт-каталог">
+                        <input type="hidden" name="imageOrder" value="catalog.jpg">
+                        <input type="hidden" name="priceOrder" value="от 25 000 р.">
+                        <input id="butMoveToBag2" type="submit" style="margin-left: auto; margin-right: auto; font-size: 28px; border: 1px solid transparent; background: none; color: cornflowerblue; cursor: pointer;" value="Заказать >">
+                    </form>
+                </div>
+            </div>
+            <div id="fourp">
+                <hr color="cornflowerblue">
+                <p style="font-size: 32px;">Назначение:</p>
+                <p style="text-align: justify;"><b>Корпоративный сайт</b> – это портал, необходимый элемент успешной работы любой компании. Он является полноценным представительством компании в Интернете и эффективным инструментом для привлечения и удержания новых клиентов. Ориентирован на существующих и потенциальных бизнес-партнеров, а также прессу.</p>
+                <p style="text-align: justify;">Многофункциональный инструмент, который помогает ускорить и усовершенствовать реализацию бизнес-процессов компании. Задачами корпоративного сайта являются повышение имиджа компании, конкурирование в Интернет-среде путем предоставления полной информации о компании, продукции компании, информации об акциях и скидках на продукцию компании, рекламы товаров/услуг, информирование о новостях компании и многое другое.</p>
+                <p style="font-size: 32px;">Стоимость: от 35000р.</p>
+                <p id="text_order3" style="text-align:justify;">Чтобы сделать заказ, Вам необходимо авторизироваться во вкладке "Вход"</p>
+                <div style="text-align: center;">
+                    <form method="GET" action="Order.html">
+                        <input type="hidden" name="typeOrder" value="Корпоративный сайт">
+                        <input type="hidden" name="imageOrder" value="coop.jpg">
+                        <input type="hidden" name="priceOrder" value="от 35 000 р.">
+                        <input id="butMoveToBag3" type="submit" style="margin-left: auto; margin-right: auto; font-size: 28px; border: 1px solid transparent; background: none; color: cornflowerblue; cursor: pointer;" value="Заказать >">
+                    </form>
+                </div>
+            </div>
+            <hr color="cornflowerblue">
+            <br>
+            <br>
+
+            <!--......-->
+            <div id="d4" onclick="ShowOne('onep1', 'textone1')">
+                <img width="100%" src="disign.jpg">
+                <p style="text-align: justify;"><b>Обновление дизайна сайта</b> – это изменение внешнего вида сайта с целью визуальной привлекательности для пользователей.</p>
+                <p style="cursor: pointer; color: cornflowerblue;" id="textone1">Подробнее ></p>
+            </div>
+            <div id="d5" onclick="ShowOne('twop1', 'texttwo1')">
+                <img width="100%" src="modify1.jpg">
+                <p style="text-align: justify;"><b>Изменение структуры сайта</b> – это видоизменение страниц сайта, изменение в расположение его элементов.</p>
+                <p style="cursor: pointer; color: cornflowerblue;" id="texttwo1">Подробнее ></p>
+            </div>
+            <div id="d6" onclick="ShowOne('threep1', 'textthree1')">
+                <img width="100%" src="conent.jpg">
+                <p style="text-align: justify;"><b>Обновление контента сайта</b> – это изменение наполняемости сайта, от которой зависит выполнение основных задач, эффективность работы любых каналов продвижения.</p>
+                <p style="cursor: pointer; color: cornflowerblue;" id="textthree1">Подробнее ></p>
+            </div>
+            <div id="d7" onclick="ShowOne('fourp1', 'textfour1')">
+                <img width="100%" src="modify2.jpg">
+                <p style="text-align: justify;"><b>Расширение функционала сайта</b> – это добавление новых инструментов, интегрирование его с различными сервисами, удаление устаревших функций, которые замедляют работу процесса.</p>
+                <p style="cursor: pointer; color: cornflowerblue;" id="textfour1">Подробнее ></p>
+            </div>
+
+
+            <div id="onep1">
+                <hr color="cornflowerblue">
+                <p style="font-size: 32px;">Рекомендуем в случае:</p>
+                <ui>
+                    <li>ребрендинг</li>
+                    <li>новые сегменты целевой аудитории</li>
+                    <li>изменение требований рынка</li>
+                </ui>
+                <p style="font-size: 32px;">Стоимость: Договорная</p>
+                <p id="text_order4" style="text-align:justify;">Чтобы сделать заказ, Вам необходимо авторизироваться во вкладке "Вход"</p>
+                <div style="text-align: center;">
+                    <form method="GET" action="Order.html">
+                        <input type="hidden" name="typeOrder" value="Обновление дизайна">
+                        <input type="hidden" name="imageOrder" value="disign.jpg">
+                        <input type="hidden" name="priceOrder" value="Договорная">
+                        <input id="butMoveToBag4" type="submit" style="margin-left: auto; margin-right: auto; font-size: 28px; border: 1px solid transparent; background: none; color: cornflowerblue; cursor: pointer;" value="Заказать >">
+                    </form>
+                </div>
+            </div>
+            <div id="twop1">
+                <hr color="cornflowerblue">
+                <p style="font-size: 32px;">Рекомендуем в случае:</p>
+                <ui>
+                    <li>расширение ассортимента товаров/услуг</li>
+                    <li>для повышения удобства навигации пользователей</li>
+                    <li>смена основных задач, выполняемых сайтом</li>
+                </ui>
+                <p style="font-size: 32px;">Стоимость: Договорная</p>
+                <p id="text_order5" style="text-align:justify;">Чтобы сделать заказ, Вам необходимо авторизироваться во вкладке "Вход"</p>
+                <div style="text-align: center;">
+                    <form method="GET" action="Order.html">
+                        <input type="hidden" name="typeOrder" value="Изменение структуры">
+                        <input type="hidden" name="imageOrder" value="modify1.jpg">
+                        <input type="hidden" name="priceOrder" value="Договорная">
+                        <input id="butMoveToBag5" type="submit" style="margin-left: auto; margin-right: auto; font-size: 28px; border: 1px solid transparent; background: none; color: cornflowerblue; cursor: pointer;" value="Заказать >">
+                    </form>
+                </div>
+            </div>
+            <div id="threep1">
+                <hr color="cornflowerblue">
+                <p style="font-size: 32px;">Рекомендуем в случае:</p>
+                <ui>
+                    <li>необходимости повышения эффективности продвижения сайта</li>
+                    <li>ребрендинг</li>
+                </ui>
+                <p style="font-size: 32px;">Стоимость: Договорная</p>
+                <p id="text_order6" style="text-align:justify;">Чтобы сделать заказ, Вам необходимо авторизироваться во вкладке "Вход"</p>
+                <div style="text-align: center;">
+                    <form method="GET" action="Order.html">
+                        <input type="hidden" name="typeOrder" value="Обновление контента">
+                        <input type="hidden" name="imageOrder" value="conent.jpg">
+                        <input type="hidden" name="priceOrder" value="Договорная">
+                        <input id="butMoveToBag6" type="submit" style="margin-left: auto; margin-right: auto; font-size: 28px; border: 1px solid transparent; background: none; color: cornflowerblue; cursor: pointer;" value="Заказать >">
+                    </form>
+                </div>
+            </div>
+            <div id="fourp1">
+                <hr color="cornflowerblue">
+                <p style="font-size: 32px;">Рекомендуем в случае:</p>
+                <ui>
+                    <li>смены пользовательских требований</li>
+                    <li>смена алгоритмов поисковых систем</li>
+                    <li>наличие у конкурентов более удобных сервисов</li>
+                </ui>
+                <p style="font-size: 32px;">Стоимость: Договорная</p>
+                <p id="text_order7" style="text-align:justify;">Чтобы сделать заказ, Вам необходимо авторизироваться во вкладке "Вход"</p>
+                <div style="text-align: center;">
+                    <form method="GET" action="Order.html">
+                        <input type="hidden" name="typeOrder" value="Расширение функционала">
+                        <input type="hidden" name="imageOrder" value="modify2.jpg">
+                        <input type="hidden" name="priceOrder" value="Договорная">
+                        <input id="butMoveToBag7" type="submit" style="margin-left: auto; margin-right: auto; font-size: 28px; border: 1px solid transparent; background: none; color: cornflowerblue; cursor: pointer;" value="Заказать >">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--......-->
+
+
+
+
+
+        <hr id="hr" style="width: 0%;">
+        <div id="foot" style="width: 80%; margin-left: auto; margin-right: auto;">
+            <sub id="copyR" style="vertical-align: middle;">Copyright © 2020 - MOVEUP</sub>
+            <a id="policy" href="Policy.html" target="_blank">Политика конфиденциальности</a>
+            <div id="cont">
+                <sub style="vertical-align: middle;"><b>Контакты:</b></sub><br>
+                <sub>Номер телефона: 8-950-366-27-38</sub><br>
+                <sub>E-mail: Moveup2020@mail.ru</sub>
+            </div>
+            <div id="cont1">
+                <sub style="vertical-align: middle;"><b>Контакты:</b></sub><br>
+                <sub>Номер телефона: 8-950-366-27-38</sub><br>
+                <sub>E-mail: Moveup2020@mail.ru</sub>
+            </div>
+        </div>
+        <script type="text/javascript">
+            let a = 10;
+            function Header(){
+                let hed = document.getElementById("headerD");
+                if(a != 100) a += 2;
+                else{
+                    clearTimeout(timeH);
+                    return;
+                }
+                hed.style.width = a + "%";
+                timeH = setTimeout("Header()", 10);
+            }
+            let x = 0;
+            function Main(){
+                let mnD = document.getElementById("mainD");
+                if(x != 1){
+                    x += 0.05;
+                }
+                else {
+
+                    clearTimeout(time);
+                    return;
+                }
+                mnD.style.opacity = x;
+                time = setTimeout("Main()", 30);
+            }
+            let y = 0;
+            function MainText(){
+
+                let mn = document.getElementById("main");
+                let foot = document.getElementById("foot");
+                if(y!=1) y += 0.05;
+                else{
+                    clearTimeout(time1);
+                    return;
+                }
+                mn.style.opacity = y;
+                foot.style.opacity = y;
+                time1 = setTimeout("MainText()", 60);
+            }
+            let z = 0;
+            function HR(){
+                let h = document.getElementById("hr");
+                if(z != 80) z += 5;
+                else{
+                    clearTimeout(time2);
+                    return;
+                }
+                h.style.width = z + "%";
+                time2 = setTimeout("HR()", 40);
+            }
+            let b = 1;
+            let blb = false;
+            function SlidePhoto(){
+                let n = 1;
+                let photo = document.getElementById("mainD");
+                if(b != photo.scrollHeight && b != 0){
+                    if(blb == false){
+                        b += 1;
+                    }else{
+                        b -= 1;
+                    }
+                }else if(b == photo.scrollHeight){
+                    blb = true;
+                    b -= 1;
+                }else if(b == 0){
+                    blb = false;
+                    b = 1;
+                    n = 6000;
+                }
+                photo.scrollTop = b;
+                timeP = setTimeout("SlidePhoto()", n);
+            }
+            function loadMain(){
+                //Header();
+                Cont();
+                SlidePhoto();
+                Main();
+                MainText();
+                HR();
+                Autho();
+                if(localStorage.getItem("mlogin") != null && localStorage.getItem("mname") != null){
+                    document.getElementById('log').innerText = localStorage.getItem("mlogin");
+                    document.getElementById('name').innerText = "Привет, " + localStorage.getItem("mname") + '!';
+                    document.getElementById('exit').style.display = "inline-block";
+                    document.getElementById('entr').style.display = "none";
+                    document.getElementById('exit1').style.display = "inline-block";
+                    document.getElementById('entr1').style.display = "none";
+                    if(document.getElementById('log').innerText == "JMatyushina@mail.ru" || document.getElementById('log').innerText == "jmatyushin@gmail.com"){
+                      let rt = ['name_header0', 'name_header1'];
+                      rt.forEach(x => {
+                        document.getElementById(x).addEventListener("click", function(){
+                          document.location.href = "RedS.html";
+                        }, false);
+                      });
+
+                    }
+                }
+
+            }
+
+            function ShowOne(a, b){
+                let str = new Array(8);
+                str[0] = "textone";
+                str[1] = "texttwo";
+                str[2] = "textthree";
+                str[3] = "textfour";
+                str[4] = "textone1";
+                str[5] = "texttwo1";
+                str[6] = "textthree1";
+                str[7] = "textfour1";
+                let str1 = new Array(8);
+                str1[0] = "onep";
+                str1[1] = "twop";
+                str1[2] = "threep";
+                str1[3] = "fourp";
+                str1[4] = "onep1";
+                str1[5] = "twop1";
+                str1[6] = "threep1";
+                str1[7] = "fourp1";
+
+                function FW(s, i){
+                    if(i != 8){
+                        if(document.getElementById(s[i]).innerText == "Свернуть <") return i;
+                        return FW(s, i += 1);
+                    }else return -1;
+                }
+
+                let r = FW(str, 0);
+                if(r != -1){
+                    let one = document.getElementById(a);
+                    let text = document.getElementById(b);
+                    text.innerText = "Свернуть <";
+                    one.style.display = "block";
+                    document.getElementById(str[r]).innerText = "Подробнее >";
+                    document.getElementById(str1[r]).style.display = "none";
+                }else{
+                    let one = document.getElementById(a);
+                    let text = document.getElementById(b);
+                    if(text.innerText == "Подробнее >"){
+                        text.innerText = "Свернуть <";
+                        one.style.display = "block";
+                    }else{
+                        text.innerText = "Подробнее >";
+                        one.style.display = "none";
+                    }
+                }
+                document.getElementById(a).scrollIntoView(false);
+            }
+            function Cont(){
+              const y = document.getElementById("cont").clientWidth;
+              const O = document.getElementById("foot").clientWidth;
+              const a = document.getElementById("copyR").clientWidth;
+              const b = document.getElementById("policy").clientWidth;
+              const H = a + b;
+              const S = O - (H + y);
+              const m  = S - H;
+              document.getElementById("cont").style.marginLeft = m + 'px';
+            }
+		function Exit(){
+			localStorage.clear();
+			document.location.href = "hoster_block.html";
+		}
+		function Autho(){
+		  let name_user = localStorage.getItem("mlogin");
+		  if(name_user == null){
+          let move_tobag = "butMoveToBag";
+		      for(let i = 0;i<8;i++){
+            let str_move = move_tobag + i;
+            document.getElementById(str_move).style.display = "none";
+          }
+  		  }else{
+          let t_order = "text_order";
+          for(let i = 0;i<8;i++){
+            let a_t_order = t_order + i;
+            document.getElementById(a_t_order).style.display = "none";
+          }
+        }
+		}
+    function go(){document.location.href='ChangeProfile.html';}
+
+    let m = 0;
+    function ShowMenu(){
+      m = m == 0 ? 1 : 0;
+      document.getElementById('menup').style.display = m == 1 ? "block" : "none";
+      document.getElementById('menu').innerText = m == 1 ? "Меню ▲" : "Меню ▼";
+    }
+
+    function OColor(n, b){
+      if(b == 1) document.getElementById(n).style.color = "cornflowerblue";
+      else document.getElementById(n).style.color = "black";
+    }
+        </script>
+    </body>
+</html>
