@@ -34,8 +34,8 @@ main{
     width: 100%;
     min-height: 100vh;
 }
-.imgsSlide > img{ width: 100%; height: 50vh; border-radius: 15px; transition: 1s;}
-.Gallery > img { width: 25%; border-radius: 15px; height: 15vh; cursor: pointer;}
+.imgsSlide > img{ width: 100%; height: 50vh; border-radius: 5px; transition: 0.4s;}
+.Gallery > img { width: 25%; border-radius: 5px; height: 15vh; cursor: pointer;}
 .text{
     margin-top: 5%;
 }
@@ -44,11 +44,56 @@ main{
     font-size: 170%;
     text-align: center;
 }
+
 .description{
     color: dimgray;
     font-size: 130%;
+    animation: show 1s steps(30, end);
+    font-style: italic;
+}
+@keyframes show{
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
+.our{ color: dimgray; font-size: 170%; }
+.newS, .modS{ font-size: 150%; }
+.newS > li , .modS > li{ color: dodgerblue; }
+.newS > li > span, .modS > li > span { color: dimgray; }
+.panels > div{ display: flex; margin-left: auto; margin-right: auto; }
+.netShop, .vizit, .catalog, .coop, .updtDisgn, .chngStruct, .updtCont, .addFunc{ 
+    margin: auto; 
+    width: 50%; 
+    text-align: center; 
+    cursor: pointer; 
+    transition: 0.3s;
+}
+.netShop > img, .vizit > img, .catalog > img, .coop > img, .updtDisgn > img, .chngStruct > img, .updtCont > img,
+.addFunc > img{
+    width: 35vh;
+    border-radius: 5px;
+}
+.titleSite{
+    color: dimgray;
+    font-size: 150%;
+    font-style: italic;
+}
+
+
+footer{
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 5px;
+    color: dimgray;
+}
+.policy{
+    font-size: 130%;
+    cursor: pointer;
+}
+.phone, .email{ font-size: 130%; }
+.cpright{
+    margin-bottom: 0;
+}
 @media screen and (min-width:769px){
     /*header*/
     header > div{
@@ -67,7 +112,22 @@ main{
         margin-left: auto;
         margin-right: auto;
     }
-    
+    .netShop:hover, .vizit:hover, .catalog:hover, .coop:hover, .updtDisgn:hover, .chngStruct:hover, .updtCont:hover,
+    .addFunc:hover{
+        transform: scale(1.1); 
+    }
+
+    /*footer*/
+    footer > div > img{
+        width: 10vh;
+        height: 10vh;
+        animation: puls 2s infinite;
+    }
+    @keyframes puls {
+        from { transform: scale(0.7); }
+        50% { transform: scale(1); }
+        to { transform: scale(0.7); }
+    }
 }
 
 

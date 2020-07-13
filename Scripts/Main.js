@@ -1,3 +1,4 @@
+'use strict';
 class Loader{
     Load(){
         this.Events();
@@ -17,11 +18,11 @@ class Loader{
 
 class Slider{
     Next(val){
-        $(".imgsSlide > img").css({"opacity": 0});
+        $(".imgsSlide > img").css({"opacity": 0.1});
         setTimeout(() => {
             $(".imgsSlide > img")[0].src = val.src;
             $(".imgsSlide > img").css({"opacity": 1});
-        }, 1000);
+        }, 400);
     }
     Slide(){
         let n = $(".Gallery > img").length;
@@ -29,12 +30,12 @@ class Slider{
         
         setInterval(() => {
             let elem = $(".Gallery > img")[i];
-            $(".imgsSlide > img").css({"opacity": 0});
+            $(".imgsSlide > img").css({"opacity": 0.1});
             setTimeout(() => {
                 $(".imgsSlide > img")[0].src = elem.src;
                 $(".imgsSlide > img").css({"opacity": 1});
-            }, 1000);
+            }, 400);
             i = i == n - 1 ? 0 : i + 1;
-        }, 6000)
+        }, 5000)
     }
 }
