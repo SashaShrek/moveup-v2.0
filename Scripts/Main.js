@@ -4,6 +4,7 @@ class Loader{
         this.Events();
     }
     Events(){
+    //slider
         let slider = new Slider();
         let i = 0;
         let n = $(".Gallery > img").length;
@@ -13,6 +14,17 @@ class Loader{
             i++;
         }
         slider.Slide();
+    //navigator
+        let navigator = new Navigator();
+        let data = [
+            "help.html"
+        ];
+        i = 1;
+        while(i <= 1){
+            let page = data[i - 1];
+            $("#root > div > header > div > button")[i].addEventListener("click", () => navigator.Go(page));
+            i++;
+        }
     }
 }
 
@@ -37,5 +49,11 @@ class Slider{
             }, 400);
             i = i == n - 1 ? 0 : i + 1;
         }, 5000)
+    }
+}
+
+class Navigator{
+    Go(page){
+        document.location.href = page;
     }
 }

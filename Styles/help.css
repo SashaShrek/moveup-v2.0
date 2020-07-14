@@ -1,0 +1,107 @@
+body{
+    margin: 0;
+}
+/*header*/
+header{
+    width: 100%;
+    box-shadow: 0 0 5px;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 2;
+}
+.title{
+    font-size: 150%;
+    display: inline-block;
+    vertical-align: middle;
+}
+header > div > button{
+    margin: auto;
+    background: transparent;
+    outline: none;
+    vertical-align: middle;
+    border: none;
+    font-size: 120%;
+    color: dimgray;
+    cursor: pointer;
+    transition: 0.2s;
+}
+header > div > button:hover{ opacity: 0.6; }
+header > div > img:hover{ transform: rotateY(180deg); }
+
+main{
+    width: 100%;
+    min-height: 100vh;
+}
+
+main > div > p, .soglash > p{
+    color: dimgray;
+    font-size: 170%;
+    text-align: center;
+}
+.titleText > p{
+    color: dimgray;
+    font-size: 140%;
+}
+.definitions, .okObject, .tasksAutor, .tasksFrom, .myMoney, .garant, .law, .spor, .final, .app{
+    color: dimgray;
+    font-size: 130%;
+    font-style: italic;
+}
+.app > a{
+    display: block;
+    margin-bottom: 2%;
+}
+
+
+footer{
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 5px;
+    color: dimgray;
+}
+.policy{
+    font-size: 130%;
+    cursor: pointer;
+}
+.phone, .email{ font-size: 130%; }
+.cpright{
+    margin-bottom: 0;
+}
+
+@media screen and (min-width:769px){
+    /*header*/
+    header > div{
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        color: dimgray;
+        display: flex;
+    }
+    header > div > img{ width: 5vh; height: 5vh; vertical-align: middle; margin: auto; transition: 1s;}
+
+    /*main*/
+    main > div{
+        margin-top: calc(10vh + 2%);
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /*footer*/
+    footer > div > img{
+        width: 10vh;
+        height: 10vh;
+        animation: puls 2s infinite;
+    }
+    @keyframes puls {
+        from { transform: scale(0.7); }
+        50% { transform: scale(1); }
+        to { transform: scale(0.7); }
+    }
+}
+
+
+@media screen and (max-device-width:480px) and (orientation: portrait){
+
+}
