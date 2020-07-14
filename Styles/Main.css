@@ -44,7 +44,7 @@ main{
     font-size: 170%;
     text-align: center;
 }
-
+.icons{ display: flex; }
 .description{
     color: dimgray;
     font-size: 130%;
@@ -112,6 +112,7 @@ footer{
         margin-left: auto;
         margin-right: auto;
     }
+    .icons > img{ margin: auto; }
     .netShop:hover, .vizit:hover, .catalog:hover, .coop:hover, .updtDisgn:hover, .chngStruct:hover, .updtCont:hover,
     .addFunc:hover{
         transform: scale(1.1); 

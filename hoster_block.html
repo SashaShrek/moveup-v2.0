@@ -15,122 +15,139 @@
         <div id="root"></div>
         <script type="text/babel">
         'use strict';
-        //header
-            var hdiv = <div>
-                    <img src="Images/logo.png" alt="Logo"/>
-                    <p className="title">MOVEUP</p>
-                    <button>Главная</button>
-                    <button>Соглашение</button>
-                    <button>Корзина</button>
-                    <button>Авторизация</button>
-                </div>;
-            
-            var hder = <header>{hdiv}</header>;
+        //header            
             class Header extends React.Component{
-                render(){
+                Create(){
+                    const hdiv = <div>
+                        <img src="Images/logo.png" alt="Logo"/>
+                        <p className="title">MOVEUP</p>
+                        <button>Главная</button>
+                        <button>Соглашение</button>
+                        <button>Корзина</button>
+                        <button>Авторизация</button>
+                    </div>;
+            
+                    const hder = <header>{hdiv}</header>;
                     return hder;
+                }
+                render(){
+                    return this.Create();
                 }
             };
         //main
-            var albom = <div>
-                    <div className="imgsSlide">
-                        <img src="Images/onemain.jpg" alt=""/>
-                    </div>
-                    <div className="Gallery">
-                        <img src="Images/onemain.jpg" alt=""/>
-                        <img src="Images/twomain.jpg" alt=""/>
-                    </div>
-                </div>;
-            var text = <div className="text">
-                    <h1 className="titleText">MOVEUP - это новое community в сфере разработки веб приложений</h1>
-                    <p className="description">Мы используем различные технологии (React, JS(jQuery), Node.js и другие) для достижения цели. 
-                        Простота использования, удобство и минимализм - вот основные принципы нашей работы. 
-                        Клиент находится в центре нашей бизнес-модели. Поэтому качество услуг и быстрота реагирования 
-                        на запросы клиента для нас являются одними из основных задач при выполнении заказов.</p>
-                </div>;
-            var hr = <hr size="1"></hr>;
-            var our = <p className="our">Наши услуги:</p>;
-            var newS = <p className="newS"><li><span>Создание</span></li></p>;
-            var modS = <p className="modS"><li><span>Модернизация</span></li></p>
-            var panels = <div className="panels">
-                    <div>
-                        <div className="netShop" title="Узнать подробнее...">
-                            <img src="Images/shop.jpg" alt=""/>
-                            <p className="titleSite">Интернет-магазин</p>
-                        </div>
-                        <div className="vizit" title="Узнать подробнее...">
-                            <img src="Images/vizit.jpg" alt=""/>
-                            <p className="titleSite">Ваша визитка</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div className="catalog" title="Узнать подробнее...">
-                            <img src="Images/catalog.jpg" alt=""/>
-                            <p className="titleSite">Каталог</p>
-                        </div>
-                        <div className="coop" title="Узнать подробнее...">
-                            <img src="Images/coop.jpg" alt=""/>
-                            <p className="titleSite">Корпоративное приложение</p>
-                        </div>
-                    </div>
-                    <hr size="1" color="dodgerblue"/>
-                    {modS}
-                    <div>
-                        <div className="updtDisgn" title="Узнать подробнее...">
-                            <img src="Images/disign.jpg" alt=""/>
-                            <p className="titleSite">Обновление дизайна</p>
-                        </div>
-                        <div className="chngStruct" title="Узнать подробнее...">
-                            <img src="Images/modify1.jpg" alt=""/>
-                            <p className="titleSite">Изменение структуры</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div className="updtCont" title="Узнать подробнее...">
-                            <img src="Images/conent.jpg" alt=""/>
-                            <p className="titleSite">Обновление контента</p>
-                        </div>
-                        <div className="addFunc" title="Узнать подробнее...">
-                            <img src="Images/modify2.jpg" alt=""/>
-                            <p className="titleSite">Расширение функционала</p>
-                        </div>
-                    </div>
-                </div>;
-            var mdiv = <div>
-                    {albom}
-                    {text}
-                    {hr}
-                    {our}
-                    {newS}
-                    {panels}
-                </div>;
-            var mn = <main>{mdiv}</main>;
             class Main extends React.Component{
-                render(){
+                Create(){
+                    const albom = <div>
+                            <div className="imgsSlide">
+                                <img src="Images/onemain.jpg" alt=""/>
+                            </div>
+                            <div className="Gallery">
+                                <img src="Images/onemain.jpg" alt=""/>
+                                <img src="Images/twomain.jpg" alt=""/>
+                            </div>
+                        </div>;
+                    const icons = <div className="icons">
+                            <img src="Images/react.png" alt=""/>
+                            <img src="Images/html5.png" alt=""/>
+                            <img src="Images/css.png" alt=""/>
+                            <img src="Images/jq.png" alt=""/>
+                        </div>
+                    const text = <div className="text">
+                            <h1 className="titleText">MOVEUP - это новое community в сфере разработки веб приложений</h1>
+                            <p className="description">Мы используем различные технологии (React, JS(jQuery), CSS3 и другие) для достижения цели. 
+                                Простота использования, удобство и минимализм - вот основные принципы нашей работы. 
+                                Клиент находится в центре нашей бизнес-модели. Поэтому качество услуг и быстрота реагирования 
+                                на запросы клиента для нас являются одними из основных задач при выполнении заказов.</p>
+                            {icons}
+                        </div>;
+                    const hr = <hr size="1"></hr>;
+                    const our = <p className="our">Наши услуги:</p>;
+                    const newS = <p className="newS"><li><span>Создание</span></li></p>;
+                    const modS = <p className="modS"><li><span>Модернизация</span></li></p>
+                    const panels = <div className="panels">
+                            <div>
+                                <div className="netShop" title="Узнать подробнее...">
+                                    <img src="Images/shop.jpg" alt=""/>
+                                    <p className="titleSite">Интернет-магазин</p>
+                                </div>
+                                <div className="vizit" title="Узнать подробнее...">
+                                    <img src="Images/vizit.jpg" alt=""/>
+                                    <p className="titleSite">Ваша визитка</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="catalog" title="Узнать подробнее...">
+                                    <img src="Images/catalog.jpg" alt=""/>
+                                    <p className="titleSite">Каталог</p>
+                                </div>
+                                <div className="coop" title="Узнать подробнее...">
+                                    <img src="Images/coop.jpg" alt=""/>
+                                    <p className="titleSite">Корпоративное приложение</p>
+                                </div>
+                            </div>
+                            <hr size="1" color="dodgerblue"/>
+                            {modS}
+                            <div>
+                                <div className="updtDisgn" title="Узнать подробнее...">
+                                    <img src="Images/disign.jpg" alt=""/>
+                                    <p className="titleSite">Обновление дизайна</p>
+                                </div>
+                                <div className="chngStruct" title="Узнать подробнее...">
+                                    <img src="Images/modify1.jpg" alt=""/>
+                                    <p className="titleSite">Изменение структуры</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="updtCont" title="Узнать подробнее...">
+                                    <img src="Images/conent.jpg" alt=""/>
+                                    <p className="titleSite">Обновление контента</p>
+                                </div>
+                                <div className="addFunc" title="Узнать подробнее...">
+                                    <img src="Images/modify2.jpg" alt=""/>
+                                    <p className="titleSite">Расширение функционала</p>
+                                </div>
+                            </div>
+                        </div>;
+                    const mdiv = <div>
+                            {albom}
+                            {text}
+                            {hr}
+                            {our}
+                            {newS}
+                            {panels}
+                        </div>;
+                    const mn = <main>{mdiv}</main>;
                     return mn;
+                }
+                render(){
+                    return this.Create();
                 }
             };
         //footer
-            var dftr = <div>
-                    <img src="Images/logo.png" alt=""/>
-                    <p className="policy">Политика конфиденциальности</p>
-                    <p className="phone"><li>Телефон: 8-950-366-27-38</li></p>
-                    <p className="email"><li>e-mail: Moveup2020@mail.ru</li></p>
-                    <p className="cpright">Copyright © 2020 - MOVEUP</p>
-                </div>;
-            var ftr = <footer>{dftr}</footer>;
             class Footer extends React.Component{
-                render(){
+                Create(){
+                    const dftr = <div>
+                            <img src="Images/logo.png" alt=""/>
+                            <p className="policy">Политика конфиденциальности</p>
+                            <p className="phone"><li>Телефон: 8-950-366-27-38</li></p>
+                            <p className="email"><li>e-mail: Moveup2020@mail.ru</li></p>
+                            <p className="cpright">Copyright © 2020 - MOVEUP</p>
+                        </div>;
+                    const ftr = <footer>{dftr}</footer>;
                     return ftr;
                 }
+                render(){
+                    return this.Create();
+                }
             };
-            const rdiv = <div>
-                    <Header/>
-                    <Main/>
-                    <Footer/>
-                </div>;
             ReactDOM.render(
-                rdiv,
+                (function(){
+                    return <div>
+                        <Header/>
+                        <Main/>
+                        <Footer/>
+                    </div>;
+                })(),
                 document.getElementById("root")
             )
 
