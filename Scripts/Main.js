@@ -18,7 +18,7 @@ class Loader{
 
 class Slider{
     Next(val){
-        $(".imgsSlide > img").css({"opacity": 0.1});
+        $(".imgsSlide > img").css({"opacity": 0.2});
         setTimeout(() => {
             $(".imgsSlide > img")[0].src = val.src;
             $(".imgsSlide > img").css({"opacity": 1});
@@ -30,7 +30,7 @@ class Slider{
         
         setInterval(() => {
             let elem = $(".Gallery > img")[i];
-            $(".imgsSlide > img").css({"opacity": 0.1});
+            $(".imgsSlide > img").css({"opacity": 0.2});
             setTimeout(() => {
                 $(".imgsSlide > img")[0].src = elem.src;
                 $(".imgsSlide > img").css({"opacity": 1});
