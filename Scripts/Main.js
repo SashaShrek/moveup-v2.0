@@ -17,11 +17,14 @@ class Loader{
     //navigator
         let navigator = new Navigator();
         let data = [
-            "help.html"
+            "hoster_block.html",
+            "help.html",
+            "busket.html",
+            "input.html"
         ];
-        i = 1;
-        while(i <= 1){
-            let page = data[i - 1];
+        i = 0;
+        while(i <= 3){
+            let page = data[i];
             $("#root > div > header > div > button")[i].addEventListener("click", () => navigator.Go(page));
             i++;
         }
@@ -34,7 +37,7 @@ class Slider{
         setTimeout(() => {
             $(".imgsSlide > img")[0].src = val.src;
             $(".imgsSlide > img").css({"opacity": 1});
-        }, 400);
+        }, 500);//400
     }
     Slide(){
         let n = $(".Gallery > img").length;
@@ -46,7 +49,7 @@ class Slider{
             setTimeout(() => {
                 $(".imgsSlide > img")[0].src = elem.src;
                 $(".imgsSlide > img").css({"opacity": 1});
-            }, 400);
+            }, 500);
             i = i == n - 1 ? 0 : i + 1;
         }, 5000)
     }

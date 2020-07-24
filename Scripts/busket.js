@@ -3,7 +3,7 @@ class Loader{
         this.Events();
     }
     Events(){
-    //navigator
+        //navigator
         let navigator = new Navigator();
         let data = [
             "hoster_block.html",

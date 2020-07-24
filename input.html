@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Styles/input.css">
+        <script src="React/react.dev.js"></script>
+        <script src="React/react-dom.dev.js"></script>
+        <script src="React/babel.js"></script>
+        <script src="jQuery/jQuery.js"></script>
+        <link rel="shortcut icon" href="Images/logo.png" type="image/png">
+        <title>Авторизация</title>
+    </head>
+    <body onload="new Loader().Load()">
+        <div id="root"></div>
+        <script type="text/babel">
+        //header
+            class Header extends React.Component{
+                Create(){
+                    const hdiv = <div>
+                            <img src="Images/logo.png" alt="Logo"/>
+                            <p className="title">MOVEUP</p>
+                            <button>Главная</button>
+                            <button>Соглашение</button>
+                            <button>Корзина</button>
+                            <button>Авторизация</button>
+                        </div>;
+                    return <header>{hdiv}</header>;
+                }
+                render(){
+                    return this.Create();
+                }
+            }
+        //main
+            class Main extends React.Component{
+                Create(){
+                    const input = <div className="inPanel">
+                            <form>
+                                <input type="hidden" name="type" value="input"/>
+                                <p><input type="text" placeholder="Ваш e-mail" name="mail"/></p>
+                                <p><input type="password" placeholder="Ваш пароль" name="pass"/></p>
+                                <p><button>Войти</button></p>    
+                            </form>
+                        </div>;
+                    const register = <div className="regPanel">
+                        
+                        </div>;
+                    const mdiv = <div>
+                            <p className="input">Вход</p>
+                            {input}
+                            <p className="register">Регистрация</p>
+                        </div>;
+                    return <main>{mdiv}</main>
+                }
+                render(){
+                    return this.Create();
+                }
+            }
+        //footer
+            class Footer extends React.Component{
+                Create(){
+                    const dftr = <div>
+                            <img src="Images/logo.png" alt=""/>
+                            <p className="policy">Политика конфиденциальности</p>
+                            <p className="phone"><li>Телефон: 8-950-366-27-38</li></p>
+                            <p className="email"><li>e-mail: Moveup2020@mail.ru</li></p>
+                            <p className="cpright">Copyright © 2020 - MOVEUP</p>
+                        </div>;
+                    const ftr = <footer>{dftr}</footer>;
+                    return ftr;
+                }
+                render(){
+                    return this.Create();
+                }
+            }
+
+            ReactDOM.render(
+                (() => <div><Header/><Main/><Footer/></div>)(),
+                document.getElementById("root")
+            )
+        </script>
+        <script type="text/javascript" src="Scripts/input.js"></script>
+    </body>
+</html>
