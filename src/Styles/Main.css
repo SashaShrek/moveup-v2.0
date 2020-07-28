@@ -45,6 +45,7 @@ main{
     font-style: italic;
     color: dimgray;
 }
+.text > a > p{ color: dimgray; font-size: 140%; outline: none; text-align: center;}
 .titleText{
     color: dimgray;
     font-size: 170%;

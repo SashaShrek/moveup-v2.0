@@ -43,8 +43,8 @@ main > div > p{
     color: dimgray;
     cursor: pointer;
 }
-.inPanel{ height: 0px; display: none; transition: 0.4s; opacity: 0;}
-.inPanel > form > p > input{
+.inPanel, .regPanel{ height: 0px; display: none; transition: 0.4s; opacity: 0;}
+.inPanel > p > input, .regPanel > p > input{
     background: transparent;
     color: dimgray;
     font-size: 120%;
@@ -55,8 +55,8 @@ main > div > p{
     text-indent: 2%;
     transition: 0.4s;
 }
-.inPanel > form > p > input:focus{ border-bottom: solid 1px cornflowerblue; }
-.inPanel > form > p > button{
+.inPanel > p > input:focus, .regPanel > p > input:focus{ border-bottom: solid 1px cornflowerblue; }
+.inPanel > p > button, .regPanel > p > button{
     background: transparent;
     color: cornflowerblue;
     font-size: 130%;

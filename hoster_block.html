@@ -3,15 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="Styles/Main.css">
-        <script src="React/react.dev.js"></script>
-        <script src="React/react-dom.dev.js"></script>
-        <script src="React/babel.js"></script>
-        <script src="jQuery/jQuery.js"></script>
-        <link rel="shortcut icon" href="Images/logo.png" type="image/png">
+        <link rel="stylesheet" href="src/Styles/Main.css">
+        <script src="lib/React/react.dev.js"></script>
+        <script src="lib/React/react-dom.dev.js"></script>
+        <script src="lib/React/babel.js"></script>
+        <script src="lib/jQuery/jQuery.js"></script>
+        <link rel="shortcut icon" href="src/Images/logo.png" type="image/png">
         <title>Создание сайтов на заказ</title>
     </head>
-    <body onload="new Loader().Load()">
+    <body onload="new Loader().Load()" alink="dimgray" vlink="dimgray" link="dimgray">
         <div id="root"></div>
         <script type="text/babel">
         'use strict';
@@ -19,7 +19,7 @@
             class Header extends React.Component{
                 Create(){
                     const hdiv = <div>
-                        <img src="Images/logo.png" alt="Logo"/>
+                        <img src="src/Images/logo.png" alt="Logo"/>
                         <p className="title">MOVEUP</p>
                         <button>Главная</button>
                         <button>Соглашение</button>
@@ -39,35 +39,36 @@
                 Create(){
                     const albom = <div>
                             <div className="imgsSlide">
-                                <img src="Images/onemain.jpg" alt=""/>
+                                <img src="src/Images/onemain.jpg" alt=""/>
                             </div>
                             <div className="Gallery">
-                                <img src="Images/onemain.jpg" alt=""/>
-                                <img src="Images/twomain.jpg" alt=""/>
-                                <img src="Images/threemain.jpg" alt=""/>
-                                <img src="Images/fourmain.jpg" alt=""/>
+                                <img src="src/Images/onemain.jpg" alt=""/>
+                                <img src="src/Images/twomain.jpg" alt=""/>
+                                <img src="src/Images/threemain.jpg" alt=""/>
+                                <img src="src/Images/fourmain.jpg" alt=""/>
                             </div>
                         </div>;
                     const icons = <div className="icons">
-                            <img src="Images/react.png" alt=""/>
-                            <img src="Images/html5.png" alt=""/>
-                            <img src="Images/css.png" alt=""/>
-                            <img src="Images/jq.png" alt=""/>
-                            <img src="Images/xamarin.png" alt=""/>
-                            <img src="Images/dotnet.png" alt=""/>
+                            <img src="src/Images/react.png" alt=""/>
+                            <img src="src/Images/html5.png" alt=""/>
+                            <img src="src/Images/css.png" alt=""/>
+                            <img src="src/Images/jq.png" alt=""/>
+                            <img src="src/Images/xamarin.png" alt=""/>
+                            <img src="src/Images/dotnet.png" alt=""/>
                         </div>
                     const text = <div className="text">
                             <h1 className="titleText">MOVEUP - это новое community в сфере разработки веб приложений</h1>
-                            <p className="description">Мы используем различные технологии (React, JS(jQuery), CSS3 и другие) для достижения цели. 
+                            <p className="description">Мы используем различные технологии (React, .NET Framework, Xamarin и другие) для достижения цели. 
                                 Простота использования, удобство и минимализм - вот основные принципы нашей работы. 
                                 Клиент находится в центре нашей бизнес-модели. Поэтому качество услуг и быстрота реагирования 
                                 на запросы клиента для нас являются одними из основных задач при выполнении заказов.</p>
                             {icons}
-                            <li>Мы гарантируем качество разработки и сможем оперативно осуществить модернизацию приложения, 
-                                так как пишем собственный "движок" с нуля и не используем посторонние</li>
-                            <li>Мы разрабатываем индивидуальный дизайн для Вас без помощи разнообразных конструкторов</li>
+                            <li>Мы гарантируем качество разработки и сможем оперативно осуществить модернизацию продукта, 
+                                так как создаём программное обеспечение исключительно под Ваши нужды.</li>
+                            <li>Мы разрабатываем индивидуальный дизайн.</li>
                             <li>Наша команда - молодые специалисты, у которых "свежий" взгляд на мир, что позволяет делать 
-                                веб приложения современными и интересными</li>
+                                Web приложения, Android/iOS приложения и прикладное ПО современными и интересными.</li>
+                                <a href="why.html"><p>Зачем это нужно?</p></a>
                         </div>;
                     const hr = <hr size="1"></hr>;
                     const our = <p className="our">Наши услуги:</p>;
@@ -76,31 +77,31 @@
                     const panels = <div className="panels">
                             <div>
                                 <div className="netShop" title="Узнать подробнее...">
-                                    <img src="Images/shop.jpg" alt=""/>
+                                    <img src="src/Images/shop.jpg" alt=""/>
                                     <p className="titleSite">Интернет-магазин</p>
                                 </div>
-                                <div className="vizit" title="Узнать подробнее...">
-                                    <img src="Images/vizit.jpg" alt=""/>
-                                    <p className="titleSite">Ваша визитка</p>
+                                <div className="catalog" title="Узнать подробнее...">
+                                    <img src="src/Images/catalog.jpg" alt=""/>
+                                    <p className="titleSite">Каталог</p>
                                 </div>
                             </div>
                             <div>
-                                <div className="catalog" title="Узнать подробнее...">
-                                    <img src="Images/catalog.jpg" alt=""/>
-                                    <p className="titleSite">Каталог</p>
+                                <div className="vizit" title="Узнать подробнее...">
+                                    <img src="src/Images/vizit.jpg" alt=""/>
+                                    <p className="titleSite">Ваша визитка</p>
                                 </div>
                                 <div className="coop" title="Узнать подробнее...">
-                                    <img src="Images/coop.jpg" alt=""/>
+                                    <img src="src/Images/coop.jpg" alt=""/>
                                     <p className="titleSite">Корпоративное приложение</p>
                                 </div>
                             </div>
                             <div>
                                 <div className="program" title="Узнать подробнее...">
-                                    <img src="Images/windows.jpg" alt=""/>
+                                    <img src="src/Images/windows.jpg" alt=""/>
                                     <p className="titleSite">Прикладное программное обеспечение</p>
                                 </div>
                                 <div className="app" title="Узнать подробнее...">
-                                    <img src="Images/ai.png" alt=""/>
+                                    <img src="src/Images/ai.png" alt=""/>
                                     <p className="titleSite">Приложения для Android/iOS</p>
                                 </div>  
                             </div>
@@ -108,21 +109,21 @@
                             {modS}
                             <div>
                                 <div className="updtDisgn" title="Узнать подробнее...">
-                                    <img src="Images/disign.jpg" alt=""/>
+                                    <img src="src/Images/disign.jpg" alt=""/>
                                     <p className="titleSite">Обновление дизайна</p>
                                 </div>
                                 <div className="chngStruct" title="Узнать подробнее...">
-                                    <img src="Images/modify1.jpg" alt=""/>
+                                    <img src="src/Images/modify1.jpg" alt=""/>
                                     <p className="titleSite">Изменение структуры</p>
                                 </div>
                             </div>
                             <div>
                                 <div className="updtCont" title="Узнать подробнее...">
-                                    <img src="Images/conent.jpg" alt=""/>
+                                    <img src="src/Images/conent.jpg" alt=""/>
                                     <p className="titleSite">Обновление контента</p>
                                 </div>
                                 <div className="addFunc" title="Узнать подробнее...">
-                                    <img src="Images/modify2.jpg" alt=""/>
+                                    <img src="src/Images/modify2.jpg" alt=""/>
                                     <p className="titleSite">Расширение функционала</p>
                                 </div>
                             </div>
@@ -146,7 +147,7 @@
             class Footer extends React.Component{
                 Create(){
                     const dftr = <div>
-                            <img src="Images/logo.png" alt=""/>
+                            <img src="src/Images/logo.png" alt=""/>
                             <p className="policy">Политика конфиденциальности</p>
                             <p className="phone"><li>Телефон: 8-950-366-27-38</li></p>
                             <p className="email"><li>e-mail: Moveup2020@mail.ru</li></p>
@@ -169,6 +170,6 @@
             )
 
         </script>
-        <script type="text/javascript" src="Scripts/Main.js"></script>
+        <script type="text/javascript" src="src/Scripts/Main.js"></script>
     </body>
 </html>

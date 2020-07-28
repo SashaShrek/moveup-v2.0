@@ -1,27 +1,32 @@
+interface ILoader{
+    Load(): void;
+    Events(): void;
+}
+
 class Loader{
-    Load(){
+    Load(): void{
         this.Events();
     }
-    Events(){
+    Events(): void{
     //navigator
-        let navigator = new Navigator();
-        let data = [
+        let navigator: Navigat = new Navigat();
+        let data: object = [
             "hoster_block.html",
             "help.html",
             "busket.html",
             "input.html"
         ];
-        let i = 0;
+        let i: number = 0;
         while(i <= 3){
-            let page = data[i];
+            let page: string = data[i];
             $("#root > div > header > div > button")[i].addEventListener("click", () => navigator.Go(page));
             i++;
         }
     }
 }
 
-class Navigator{
-    Go(page){
+class Navigat{
+    Go(page: string): void{
         document.location.href = page;
     }
 }

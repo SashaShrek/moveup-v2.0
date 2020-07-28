@@ -1,7 +1,17 @@
 'use strict';
 
-class Loader{
-    Load(){
+interface ILoader{
+    Load(): void;
+    Events(): void;
+}
+
+interface ISlider{
+    Next?(val: HTMLElement): void;
+    Slide(): void;
+}
+
+class Loader implements ILoader{
+    Load(): void{
         this.Events();
     }
     Events(): void{
@@ -32,7 +42,7 @@ class Loader{
         }
 }
 
-class Slider{
+class Slider implements ISlider{
     Next(val: HTMLElement): void{
         $(".imgsSlide > img").css({"opacity": 0.2});
         setTimeout(() => {
@@ -52,7 +62,7 @@ class Slider{
                 $(".imgsSlide > img").css({"opacity": 1});
             }, 500);
             i = i == n - 1 ? 0 : i + 1;
-        }, 5000)
+        }, 5000);
     }
 }
 

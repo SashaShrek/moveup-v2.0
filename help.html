@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="Styles/help.css">
-        <script src="React/react.dev.js"></script>
-        <script src="React/react-dom.dev.js"></script>
-        <script src="React/babel.js"></script>
-        <script src="jQuery/jQuery.js"></script>
-        <link rel="shortcut icon" href="Images/logo.png" type="image/png">
+        <link rel="stylesheet" href="src/Styles/help.css">
+        <script src="lib/React/react.dev.js"></script>
+        <script src="lib/React/react-dom.dev.js"></script>
+        <script src="lib/React/babel.js"></script>
+        <script src="lib/jQuery/jQuery.js"></script>
+        <link rel="shortcut icon" href="src/Images/logo.png" type="image/png">
         <title>Соглашение</title>
     </head>
     <body onload="new Loader().Load()" link="black" vlink="silver" alink="silver">
@@ -19,7 +19,7 @@
             class Header extends React.Component{
                 Create(){
                     const hdiv = <div>
-                            <img src="Images/logo.png" alt="Logo"/>
+                            <img src="src/Images/logo.png" alt="Logo"/>
                             <p className="title">MOVEUP</p>
                             <button>Главная</button>
                             <button>Соглашение</button>
@@ -239,7 +239,7 @@
             class Footer extends React.Component{
                 Create(){
                     const dftr = <div>
-                            <img src="Images/logo.png" alt=""/>
+                            <img src="src/Images/logo.png" alt=""/>
                             <p className="policy">Политика конфиденциальности</p>
                             <p className="phone"><li>Телефон: 8-950-366-27-38</li></p>
                             <p className="email"><li>e-mail: Moveup2020@mail.ru</li></p>
@@ -258,6 +258,6 @@
                 document.getElementById("root")
             )
         </script>
-        <script type="text/javascript" src="Scripts/help.js"></script>
+        <script type="text/javascript" src="src/Scripts/help.js"></script>
     </body>
 </html>

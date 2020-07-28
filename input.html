@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="Styles/input.css">
-        <script src="React/react.dev.js"></script>
-        <script src="React/react-dom.dev.js"></script>
-        <script src="React/babel.js"></script>
-        <script src="jQuery/jQuery.js"></script>
-        <link rel="shortcut icon" href="Images/logo.png" type="image/png">
+        <link rel="stylesheet" href="src/Styles/input.css">
+        <script src="lib/React/react.dev.js"></script>
+        <script src="lib/React/react-dom.dev.js"></script>
+        <script src="lib/React/babel.js"></script>
+        <script src="lib/jQuery/jQuery.js"></script>
+        <link rel="shortcut icon" href="src/Images/logo.png" type="image/png">
         <title>Авторизация</title>
     </head>
     <body onload="new Loader().Load()">
@@ -18,7 +18,7 @@
             class Header extends React.Component{
                 Create(){
                     const hdiv = <div>
-                            <img src="Images/logo.png" alt="Logo"/>
+                            <img src="src/Images/logo.png" alt="Logo"/>
                             <p className="title">MOVEUP</p>
                             <button>Главная</button>
                             <button>Соглашение</button>
@@ -35,20 +35,22 @@
             class Main extends React.Component{
                 Create(){
                     const input = <div className="inPanel">
-                            <form>
-                                <input type="hidden" name="type" value="input"/>
-                                <p><input type="text" placeholder="Ваш e-mail" name="mail"/></p>
-                                <p><input type="password" placeholder="Ваш пароль" name="pass"/></p>
-                                <p><button>Войти</button></p>    
-                            </form>
+                            <p><input type="text" placeholder="Ваш e-mail" name="mail"/></p>
+                            <p><input type="password" placeholder="Ваш пароль" name="pass"/></p>
+                            <p><button>Войти</button></p> 
                         </div>;
                     const register = <div className="regPanel">
-                        
+                            <p><input type="text" placeholder="E-mail" id="mail"/></p>
+                            <p><input type="text" placeholder="Имя" id="name"/></p>
+                            <p><input type="password" placeholder="Пароль" id="pass"/></p>
+                            <p><input type="password" placeholder="Повторите пароль" id="repass"/></p>
+                            <p><button>Зарегистрироваться</button></p>
                         </div>;
                     const mdiv = <div>
                             <p className="input">Вход</p>
                             {input}
                             <p className="register">Регистрация</p>
+                            {register}
                         </div>;
                     return <main>{mdiv}</main>
                 }
@@ -60,7 +62,7 @@
             class Footer extends React.Component{
                 Create(){
                     const dftr = <div>
-                            <img src="Images/logo.png" alt=""/>
+                            <img src="src/Images/logo.png" alt=""/>
                             <p className="policy">Политика конфиденциальности</p>
                             <p className="phone"><li>Телефон: 8-950-366-27-38</li></p>
                             <p className="email"><li>e-mail: Moveup2020@mail.ru</li></p>
@@ -79,6 +81,6 @@
                 document.getElementById("root")
             )
         </script>
-        <script type="text/javascript" src="Scripts/input.js"></script>
+        <script type="text/javascript" src="src/Scripts/input.js"></script>
     </body>
 </html>
