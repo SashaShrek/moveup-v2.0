@@ -27,33 +27,38 @@ header > div > button{
     transition: 0.2s;
 }
 header > div > button:hover{ opacity: 0.6; }
-header > div > #exit { display: none; }
 header > div > img:hover{ transform: rotateY(180deg); }
 
-/*main*/
 main{
     width: 100%;
     min-height: 100vh;
 }
-.textSite, .textApp, .textPO{ color: dimgray; }
-.textSite > h1, .textApp > h1, .textPO > h1{
+.mdiv {
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
-
-/*footer*/
-footer{
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 0 5px;
+.mdiv > p {
     color: dimgray;
+    font-size: 140%;
 }
-.policy{
-    font-size: 130%;
+.mdiv > p > input {
+    outline: none;
+    color: black;
+    font-size: 120%;
+    border: none;
+    border-bottom: 1px solid silver;
+    transition: 0.4s;
+}
+.mdiv > p > input:focus { border-bottom: 1px solid dodgerblue; }
+.mdiv > p > button {
+    background: transparent;
+    color: cornflowerblue;
+    font-size: 110%;
+    outline: none;
+    border: solid 1px cornflowerblue;
+    border-radius: 3px;
     cursor: pointer;
-}
-.phone, .email{ font-size: 130%; }
-.cpright{
-    margin-bottom: 0;
 }
 
 
@@ -68,6 +73,7 @@ footer{
     }
     header > div > img{ width: 5vh; height: 5vh; vertical-align: middle; margin: auto; transition: 1s;}
 
+
     /*main*/
     main > div{
         margin-top: calc(10vh + 2%);
@@ -75,28 +81,7 @@ footer{
         margin-left: auto;
         margin-right: auto;
     }
-
-    .textSite > p, .textApp > p, .textPO > p{
-        font-size: 130%;
-    }
-    .textSite > li, .textApp > li, .textPO > li{
-        font-size: 130%;
-        font-style: italic;
-    }
-
-    /*footer*/
-    footer > div > img{
-        width: 10vh;
-        height: 10vh;
-        animation: puls 2s infinite;
-    }
-    @keyframes puls {
-        from { transform: scale(0.7); }
-        50% { transform: scale(1); }
-        to { transform: scale(0.7); }
-    }
 }
-
 
 @media screen and (max-device-width:480px) and (orientation: portrait){
     /*header*/
@@ -108,16 +93,5 @@ footer{
         display: flex;
     }
     header > div > img{ width: 3vh; height: 3vh; vertical-align: middle; margin: auto; transition: 1s;}
-
-    /*footer*/
-    footer > div > img{
-        width: 3vh;
-        height: 3vh;
-        animation: puls 2s infinite;
-    }
-    @keyframes puls {
-        from { transform: scale(0.7); }
-        50% { transform: scale(1); }
-        to { transform: scale(0.7); }
-    }
+    
 }

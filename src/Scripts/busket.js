@@ -1,10 +1,10 @@
 class Loader{
     Load(){
-        this.Events();
-        new Data().GetData();
         if(location.search == null || location.search == ""){
             document.getElementsByClassName("message")[0].style.display = "none";
         }
+        this.Events();
+        new Data().GetData();
     }
     Events(){
         //navigator

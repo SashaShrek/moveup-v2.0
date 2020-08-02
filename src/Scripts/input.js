@@ -41,7 +41,7 @@ var Navigat = /** @class */ (function () {
     Navigat.prototype.InputShow = function (bl) {
         $(".inPanel").css(bl ? { "display": "block" } : { "display": "none" });
         setTimeout(function () {
-            $(".inPanel").css(bl ? { "opacity": 1, "height": "100px" } :
+            $(".inPanel").css(bl ? { "opacity": 1, "height": "150px" } :
                 { "opacity": 0, "height": "0px" });
         }, 50);
         bl ? this.RegShow(false) : null;

@@ -41,6 +41,7 @@ var Loader = /** @class */ (function () {
             $("header > div > #exit").css("display", "block");
             $("header > div > #exit")[0].addEventListener("click", function () { return navigator.Exit(); });
         }
+        $("header > div > p")[0].addEventListener("click", function () { return navigator.Go("RedS.html"); });
         //order
         var nameDiv = [
             ".netShop",

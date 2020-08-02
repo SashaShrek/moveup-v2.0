@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
         <link rel="stylesheet" href="src/Styles/input.css">
         <script src="lib/React/react.dev.js"></script>
         <script src="lib/React/react-dom.dev.js"></script>
@@ -11,7 +11,7 @@
         <link rel="shortcut icon" href="src/Images/logo.png" type="image/png">
         <title>Авторизация</title>
     </head>
-    <body onload="new Loader().Load()">
+    <body onload="new Loader().Load()" alink="dimgray" vlink="dimgray" link="dimgray">
         <div id="root"></div>
         <script type="text/babel">
         //header
@@ -37,6 +37,7 @@
                     const input = <div className="inPanel">
                             <p><input type="text" placeholder="Ваш e-mail" name="mail" id="mail"/></p>
                             <p><input type="password" placeholder="Ваш пароль" name="pass" id="pass"/></p>
+                            <a href="respass.html"><p>Забыли пароль?</p></a>
                             <p><button>Войти</button></p> 
                         </div>;
                     const register = <div className="regPanel">

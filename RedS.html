@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Admin</title>
+    <style media="screen">
+      #mn{
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+        background:silver;
+        text-align:center;
+      }
+      sub{
+        vertical-align: middle;
+        font-size: 18px;
+      }
+      button{
+        font-size: 19px;
+      }
+    </style>
+  </head>
+  <body onload="loadRedS()">
+    <main id="mn">
+      <input id="mail" type="text" name="" value="" placeholder="Введи почту того, кто нужен"><br>
+      <button type="button" name="button" onclick="GetData()">Получить инфу</button>
+      <br>
+      <br>
+      <sub>Тип заказа</sub>
+      <select id="one" class="" name="">
+
+      </select>
+      <br>
+      <br>
+      <sub>Нынешний Статус</sub>
+      <select id="two" class="" name="">
+      </select>
+      <br>
+      <br>
+      <sub>Статусы</sub>
+      <select id="three" class="" name="">
+        <option value="">Подтверждение заказа</option>
+        <option value="">Разработка общей структуры сайта</option>
+        <option value="">Разработка принципов навигации</option>
+        <option value="">Подготовка ТЗ</option>
+        <option value="">Разработка макета дизайна сайта</option>
+        <option value="">Аванс оплачен</option>
+        <option value="">HTML-верстка</option>
+        <option value="">Тестирование сверстанного макета</option>
+        <option value="">Проектирование и создание сайта</option>
+        <option value="">Отладка</option>
+        <option value="">Внесение и оформление текстовой информации</option>
+        <option value="">Регистрация ресурса в поисковых системах</option>
+        <option value="">Открытие доступа к сайту в Интернете под паролем</option>
+        <option value="">Полный расчет</option>
+        <option value="">Заказ закрыт</option>
+      </select>
+      <br>
+      <br>
+      <input type="checkbox" id="check">Выполнен</input>
+      <br>
+      <br>
+      <button type="button" name="button" onclick="SendData()">Сохранить</button>
+      <button type="button" name="button" onclick="Cancel()">Отмена и возврат</button>
+      <br>
+      <br>
+      <p>'!' Означает, что заказ выполнен</p>
+      <p>Значения в списках расположены соответственно (Например, выбираешь пятый элемент в "Тип заказа", значит ему равен пятый элемент в "Нынешний Статус")</p>
+      <p>При отправке данных обновит тот профиль, чья почта указана в первом поле!!!</p>
+    </main>
+    <script type="text/javascript" src="COutCry.js">
+
+    </script>
+    <script type="text/javascript" src="InCry.js">
+
+    </script>
+    <script type="text/javascript">
+      var socket = new WebSocket("ws://188.227.86.17:4496");
+      function GetData(){
+        let mail = InCry(document.getElementById("mail").value);
+        let text = "GETINFO+++" + mail;
+        socket.send(text);
+        socket.onmessage = function(event){
+          if(event.data != "False_"){
+            document.getElementById("one").addEventListener("change", function(et){
+              let index = document.getElementById("one").selectedIndex;
+              document.getElementById("two").selectedIndex = index;
+            });
+            document.getElementById("two").addEventListener("change", function(et){
+              let index = document.getElementById("two").selectedIndex;
+              document.getElementById("one").selectedIndex = index;
+            });
+
+            let data = event.data;
+            data = COutCry(data);
+            let types = data.split('/')[0];
+            let s = data.lastIndexOf('/');
+            s += 1;
+            let status = data.substr(s, data.length);
+
+            let t = 0;
+            let nop = new Option("", '');
+            document.getElementById("one").append(nop);
+
+            for(let i = 0;i<types.length;i++){
+                if(types[i] != '&'){
+                  document.getElementById("one").options[t].text += types[i];
+                }else {
+                  nop = new Option("", '');
+                  document.getElementById("one").append(nop);
+                  t++;
+                }
+            }
+            t = 0;
+            nop = new Option("", '');
+            document.getElementById("two").append(nop);
+            for(let i = 0;i<status.length;i++){
+              if(status[i] != '&'){
+                document.getElementById("two").options[t].text += status[i];
+              }else {
+                nop = new Option("", '');
+                document.getElementById("two").append(nop);
+                t++;
+              }
+            }
+          }else {
+            alert("Ой-ой, Ошибочка вышла:(");
+            location.reload();
+          }
+        };
+      }
+      function SendData(){
+        let dat = document.getElementById("mail").value + '&' + document.getElementById("one").options[document.getElementById("one").selectedIndex].text + '&'
+        + (document.getElementById("check").checked == true ? '!' : '') + document.getElementById("three").options[document.getElementById("three").selectedIndex].text;
+        let data = "NEWINFO+++" + InCry(dat);
+        socket.send(data);
+        socket.onmessage = null;
+        socket.onmessage = function(ev){
+          if(ev.data == "True_"){
+            alert("Это успех. Вау!");
+          }else alert("Ой-ой, Ошибочка вышла:(");
+          location.reload();
+        };
+      }
+      function Cancel(){
+        window.history.back();
+      }
+      function loadRedS(){
+        let nameUser = localStorage.getItem("mlogin");
+        if(nameUser != "JMatyushina@mail.ru"){
+          document.getElementById('mn').style.display = "none";
+          alert("Кажется, вы не админ. Adios");
+          window.history.back();
+        }
+      }
+    </script>
+  </body>
+</html>

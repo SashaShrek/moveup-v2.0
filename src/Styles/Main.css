@@ -83,12 +83,7 @@ main{
     cursor: pointer; 
     transition: 0.3s;
 }
-.netShop > img, .vizit > img, .catalog > img, .coop > img, .program > img, .app > img, .updtDisgn > img, 
-.chngStruct > img, .updtCont > img,
-.addFunc > img{
-    width: 35vh;
-    border-radius: 5px;
-}
+
 .titleSite{
     color: dimgray;
     font-size: 150%;
@@ -129,6 +124,12 @@ footer{
         margin-right: auto;
     }
     .icons > img{ margin: auto; }
+    .netShop > img, .vizit > img, .catalog > img, .coop > img, .program > img, .app > img, .updtDisgn > img, 
+    .chngStruct > img, .updtCont > img,
+    .addFunc > img{
+        width: 35vh;
+        border-radius: 5px;
+    }
     .netShop:hover, .vizit:hover, .catalog:hover, .coop:hover, .program:hover, .app:hover,
      .updtDisgn:hover, .chngStruct:hover, .updtCont:hover, .addFunc:hover{
         transform: scale(1.1); 
@@ -149,5 +150,44 @@ footer{
 
 
 @media screen and (max-device-width:480px) and (orientation: portrait){
+     /*header*/
+     header > div{
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        color: dimgray;
+        display: flex;
+    }
+    header > div > img{ width: 3vh; height: 3vh; vertical-align: middle; margin: auto; transition: 1s;}
 
+    /*main*/
+    main > div{
+        margin-top: calc(10vh + 2%);
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .icons > img{ margin: auto; }
+    .netShop > img, .vizit > img, .catalog > img, .coop > img, .program > img, .app > img, .updtDisgn > img, 
+    .chngStruct > img, .updtCont > img,
+    .addFunc > img{
+        width: 7vh;
+        border-radius: 5px;
+    }
+    .netShop:hover, .vizit:hover, .catalog:hover, .coop:hover, .program:hover, .app:hover,
+     .updtDisgn:hover, .chngStruct:hover, .updtCont:hover, .addFunc:hover{
+        transform: scale(1.1); 
+    }
+
+    /*footer*/
+    footer > div > img{
+        width: 3vh;
+        height: 3vh;
+        animation: puls 2s infinite;
+    }
+    @keyframes puls {
+        from { transform: scale(0.7); }
+        50% { transform: scale(1); }
+        to { transform: scale(0.7); }
+    }
 }

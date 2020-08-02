@@ -44,6 +44,7 @@ class Loader implements ILoader{
                 $("header > div > #exit").css("display", "block");
                 $("header > div > #exit")[0].addEventListener("click", () => navigator.Exit());
             }
+            $("header > div > p")[0].addEventListener("click", () => navigator.Go("RedS.html"));
         //order
             let nameDiv: Array<string> = [
                 ".netShop",

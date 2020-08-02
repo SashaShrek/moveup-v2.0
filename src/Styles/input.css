@@ -55,6 +55,7 @@ main > div > p{
     text-indent: 2%;
     transition: 0.4s;
 }
+.inPanel > a > p{ color: dimgray; font-size: 140%; outline: none; text-align: center;}
 .inPanel > p > input:focus, .regPanel > p > input:focus{ border-bottom: solid 1px cornflowerblue; }
 .inPanel > p > button, .regPanel > p > button{
     background: transparent;
@@ -115,5 +116,25 @@ footer{
 }
 
 @media screen and (max-device-width:480px) and (orientation: portrait){
+    /*header*/
+    header > div{
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        color: dimgray;
+        display: flex;
+    }
+    header > div > img{ width: 3vh; height: 3vh; vertical-align: middle; margin: auto; transition: 1s;}
 
+    /*footer*/
+    footer > div > img{
+        width: 3vh;
+        height: 3vh;
+        animation: puls 2s infinite;
+    }
+    @keyframes puls {
+        from { transform: scale(0.7); }
+        50% { transform: scale(1); }
+        to { transform: scale(0.7); }
+    }
 }

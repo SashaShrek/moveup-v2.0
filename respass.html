@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <link rel="stylesheet" href="src/Styles/respass.css">
+        <script src="lib/React/react.dev.js"></script>
+        <script src="lib/React/react-dom.dev.js"></script>
+        <script src="lib/React/babel.js"></script>
+        <script src="lib/jQuery/jQuery.js"></script>
+        <link rel="shortcut icon" href="src/Images/logo.png" type="image/png">
+        <title>Сброс пароля</title>
+    </head>
+    <body onload="new Loader().Load()">
+        <div id="root"></div>
+        <script type="text/babel">
+        //header
+            class Header extends React.Component {
+                Create(){
+                    const hdiv = <div>
+                            <img src="src/Images/logo.png" alt="Logo"/>
+                            <p className="title">MOVEUP</p>
+                            <button>Главная</button>
+                            <button>Соглашение</button>
+                            <button>Корзина</button>
+                            <button>Авторизация</button>
+                        </div>;
+                    return <header>{hdiv}</header>;
+                }
+                render(){
+                    return this.Create();
+                }
+            }
+        //main
+            class Main extends React.Component {
+                Create(){
+                    const mdiv = <div className="mdiv">
+                            <p>Введите свой e-mail</p>
+                            <p><input type="text"/></p>
+                            <p><button>Сбросить пароль</button></p>
+                            <p>После этого проверьте свою почту</p>
+                        </div>;
+                    return <main>{mdiv}</main>;
+                }
+                render(){
+                    return this.Create();
+                }
+            }
+            ReactDOM.render(
+                <div><Header/><Main/></div>,
+                document.getElementById("root")
+            )
+        </script>
+        <script type="text/javascript" src="src/Scripts/InCry.js"></script>
+        <script type="text/javascript" src="src/Scripts/respass.js"></script>
+    </body>
+</html>
