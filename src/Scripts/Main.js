@@ -36,6 +36,47 @@ var Loader = /** @class */ (function () {
         while (i <= 3) {
             _loop_2();
         }
+        if (localStorage.getItem("mlogin") != null) {
+            $("header > div > #autho").css({ "display": "none" });
+            $("header > div > #exit").css("display", "block");
+            $("header > div > #exit")[0].addEventListener("click", function () { return navigator.Exit(); });
+        }
+        //order
+        var nameDiv = [
+            ".netShop",
+            ".catalog",
+            ".vizit",
+            ".coop",
+            ".program",
+            ".app",
+            ".updtDisgn",
+            ".chngStruct",
+            ".updtCont",
+            ".addFunc"
+        ];
+        var pathImg = [
+            "shop.jpg",
+            "catalog.jpg",
+            "vizit.jpg",
+            "coop.jpg",
+            "windows.jpg",
+            "ai.png",
+            "disign.jpg",
+            "modify1.jpg",
+            "conent.jpg",
+            "modify2.jpg"
+        ];
+        i = 0;
+        n = nameDiv.length;
+        var _loop_3 = function () {
+            var text = $(nameDiv[i] + " > p").text();
+            var textImg = pathImg[i];
+            $(nameDiv[i])[0].addEventListener("click", function () { return navigator.GoGet(text, textImg); });
+            i++;
+        };
+        while (i < n) {
+            _loop_3();
+        }
     };
     return Loader;
 }());
@@ -69,6 +110,14 @@ var Navigat = /** @class */ (function () {
     }
     Navigat.prototype.Go = function (page) {
         document.location.href = page;
+    };
+    Navigat.prototype.GoGet = function (textMain, pImg) {
+        var str = "order.html?" + textMain + '&' + pImg;
+        document.location.href = str;
+    };
+    Navigat.prototype.Exit = function () {
+        localStorage.clear();
+        location.reload();
     };
     return Navigat;
 }());

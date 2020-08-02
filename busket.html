@@ -23,7 +23,8 @@
                             <button>Главная</button>
                             <button>Соглашение</button>
                             <button>Корзина</button>
-                            <button>Авторизация</button>
+                            <button id="autho">Авторизация</button>
+                            <button id="exit">Выйти</button>
                         </div>;
                     return <header>{hdiv}</header>;
                 }
@@ -35,9 +36,25 @@
             class Main extends React.Component{
                 Create(){
                     const panel = <div className="panel">
+                            <table id="table" cellSpacing="0" cellPadding="5">
+                                <tbody>
+                                    <tr>
+                                        <td id="typePay"><p>Тип заказа</p></td>
+                                        <td id="statusPay"><p>Статус заказа</p></td>     
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>;
+                    const message = <div className="message">
+                            <p>Спасибо за Ваш заказ!</p>
+                            <p>Ожидайте письмо на Вашу электронную почту
+                                о подтверждении принятия заказа в работу.</p>
+                            <p>С порядком выполнения и оплаты заказа
+                                Вы можете ознакомиться в пункте меню «Соглашение».</p>
                         </div>;
                     const hmain = <div>
                             {panel}
+                            {message}
                         </div>;
                     return <main>{hmain}</main>
                 }
@@ -67,6 +84,7 @@
                 document.getElementById("root")
             )
         </script>
-        <script src="src/Scripts/busket.js"></script>
+        <script type="text/javascript" src="src/Scripts/InCry.js"></script>
+        <script type="text/javascript" src="src/Scripts/busket.js"></script>
     </body>
 </html>

@@ -28,6 +28,7 @@ var Loader = /** @class */ (function () {
         var sender = new Sender();
         //let form: JQuery<HTMLElement> = $(".inPanel > form");
         $(".inPanel > p > button")[0].addEventListener("click", function () { return sender.Input(); });
+        $(".regPanel > p > button")[0].addEventListener("click", function () { return sender.Register(); });
     };
     return Loader;
 }());
@@ -59,8 +60,51 @@ var Sender = /** @class */ (function () {
     function Sender() {
     }
     Sender.prototype.Input = function () {
+        let mail = $(".inPanel > p > #mail").val();
+        let pass = $(".inPanel > p > #pass").val();
+        if(mail == "" || pass == ""){
+            $("#err").text("Заполните все поля");
+            return;
+        }
+        let message = "ENTER+++++" + InCry(mail + '&' + pass);
+        let socket = new WebSocket("ws://188.227.86.17:4496");
+        socket.onopen = () => {
+            socket.send(message);
+        };
+        socket.onmessage = event => {
+            if(event.data == "False_"){
+                $("#err").text("Пользователь не существует!");
+            }else{
+                localStorage.setItem("mlogin", mail);
+                new Navigat().Go("hoster_block.html");
+            }
+        };
     };
     Sender.prototype.Register = function () {
+        let name = $(".regPanel > p #name").val();
+        let lastname = $(".regPanel > p > #lastname").val();
+        let mail = $(".regPanel > p > #mail").val();
+        let pass = $(".regPanel > p > #pass").val();
+        let repass = $(".regPanel > p > #repass").val();
+        if(pass != repass) {
+            $("#err").text("Пароли не совпадают!");
+            return;
+        }
+        if(name != "" && lastname != "" && mail != "" && pass != ""){
+            let message = "REGISTER++" + InCry(name + '&' + lastname + '&' + mail + '&' + pass);
+            let socket = new WebSocket("ws://188.227.86.17:4496");
+            socket.onopen = () => {
+                socket.send(message);
+            };
+            socket.onmessage = event => {
+                if(event.data == "True_") {
+                    localStorage.setItem("mlogin", mail);
+                    new Navigat().Go("hoster_block.html");
+                }else $("#err").text("Пользователь существует!");
+            };
+        }else{
+            $("#err").text("Заполните все поля");
+        }
     };
     return Sender;
 }());

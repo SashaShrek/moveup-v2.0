@@ -35,18 +35,20 @@
             class Main extends React.Component{
                 Create(){
                     const input = <div className="inPanel">
-                            <p><input type="text" placeholder="Ваш e-mail" name="mail"/></p>
-                            <p><input type="password" placeholder="Ваш пароль" name="pass"/></p>
+                            <p><input type="text" placeholder="Ваш e-mail" name="mail" id="mail"/></p>
+                            <p><input type="password" placeholder="Ваш пароль" name="pass" id="pass"/></p>
                             <p><button>Войти</button></p> 
                         </div>;
                     const register = <div className="regPanel">
                             <p><input type="text" placeholder="E-mail" id="mail"/></p>
                             <p><input type="text" placeholder="Имя" id="name"/></p>
+                            <p><input type="text" placeholder="Фамилия" id="lastname"/></p>
                             <p><input type="password" placeholder="Пароль" id="pass"/></p>
                             <p><input type="password" placeholder="Повторите пароль" id="repass"/></p>
                             <p><button>Зарегистрироваться</button></p>
                         </div>;
                     const mdiv = <div>
+                            <p id="err"></p>
                             <p className="input">Вход</p>
                             {input}
                             <p className="register">Регистрация</p>
@@ -81,6 +83,8 @@
                 document.getElementById("root")
             )
         </script>
+        <script type="text/javascript" src="src/Scripts/COutCry.js"></script>
+        <script type="text/javascript" src="src/Scripts/InCry.js"></script>
         <script type="text/javascript" src="src/Scripts/input.js"></script>
     </body>
 </html>

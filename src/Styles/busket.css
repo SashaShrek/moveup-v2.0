@@ -27,6 +27,7 @@ header > div > button{
     transition: 0.2s;
 }
 header > div > button:hover{ opacity: 0.6; }
+header > div > #exit { display: none; }
 header > div > img:hover{ transform: rotateY(180deg); }
 
 main{
@@ -37,6 +38,26 @@ main > div > div{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+#table {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid cornflowerblue;
+    color: dimgray;
+    font-size: 150%;
+}
+#table > tbody > tr > #typePay, #statusPay {
+    border-bottom: 1px solid dodgerblue;
+}
+.message {
+    margin-left: auto; margin-right: auto; text-align: center;
+}
+.message > p {
+    color: dimgray;
+    font-size: 140%;
+    font-style: italic;
 }
 
 footer{

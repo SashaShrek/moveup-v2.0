@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="src/Styles/order.css">
+        <script src="lib/React/react.dev.js"></script>
+        <script src="lib/React/react-dom.dev.js"></script>
+        <script src="lib/React/babel.js"></script>
+        <script src="lib/jQuery/jQuery.js"></script>
+        <link rel="shortcut icon" href="src/Images/logo.png" type="image/png">
+        <title>Заказ</title>
+    </head>
+    <body onload="new Loader().Load()">
+        <div id="root"></div>
+        <script type="text/babel">
+        //header
+            class Header extends React.Component{
+                Create(){
+                    const hdiv = <div>
+                        <img src="src/Images/logo.png" alt="Logo"/>
+                        <p className="title">MOVEUP</p>
+                        <button>Главная</button>
+                        <button>Соглашение</button>
+                        <button>Корзина</button>
+                        <button id="autho">Авторизация</button>
+                        <button id="exit">Выйти</button>
+                    </div>;
+            
+                    const hder = <header>{hdiv}</header>;
+                    return hder;
+                }
+                render(){
+                    return this.Create();
+                }
+            }
+        //main
+            class Main extends React.Component{
+                Create(){
+                    const headmdiv = <div className="headmdiv">
+                            <img src="src/Images/logo.png" alt="Картинка"/>
+                            <p id="titleMain">Название услуги</p>
+                            <p>Описание</p>
+                            <p id="price">Стоимость:</p>
+                        </div>;
+                    const mainmdiv = <div className="mainmdiv">
+                            <p id="err"></p>
+                            <p id="questions">Ответьте на пару вопросов:</p>
+                            <div id="common">
+                                <p>Название приложения/сайта</p>
+                                <input type="text"/>
+                                <p>Перечень страниц</p>
+                                <input type="text"/>
+                                <p>Условия оплаты, доставки, гарантии</p>
+                                <textarea name="" id="one" cols="50" rows="10"></textarea>
+                                <p>Оформление</p>
+                                <textarea name="" id="two" cols="50" rows="10"></textarea>
+                                <p>Контакная информация</p>
+                                <input type="text"/>    
+                            </div>
+                            <div id="modify">
+                                <p>Что Вы хотите изменить в вашем сайте/приложении?</p>
+                                <textarea name="" id="one" cols="50" rows="10"></textarea>
+                                <p>Контакная информация</p>
+                                <input type="text"/>
+                            </div>
+                            <p id="msg">Авторизируйтесь, чтобы сделать заказ</p>
+                            <p><button>Заказать</button></p>
+                        </div>;
+                    const mdiv = <div className="mdiv">
+                            {headmdiv}
+                            <hr size="1" color="dodgerblue"/>
+                            {mainmdiv}
+                        </div>;
+                    return <main>{mdiv}</main>;
+                }
+                render(){
+                    return this.Create();
+                }
+            }
+        //footer
+            class Footer extends React.Component{
+                Create(){
+                    const dftr = <div>
+                            <img src="src/Images/logo.png" alt=""/>
+                            <p className="policy">Политика конфиденциальности</p>
+                            <p className="phone"><li>Телефон: 8-950-366-27-38</li></p>
+                            <p className="email"><li>e-mail: Moveup2020@mail.ru</li></p>
+                            <p className="cpright">Copyright © 2020 - MOVEUP</p>
+                        </div>;
+                    const ftr = <footer>{dftr}</footer>;
+                    return ftr;
+                }
+                render(){
+                    return this.Create();
+                }
+            };
+            ReactDOM.render(
+                <div>
+                    <Header/><Main/><Footer/>
+                </div>,
+                document.getElementById("root")
+            );
+        </script>
+        <script type="text/javascript" src="src/Scripts/order.js"></script>
+    </body>
+</html>

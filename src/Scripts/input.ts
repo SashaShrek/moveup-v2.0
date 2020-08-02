@@ -66,7 +66,11 @@ class Navigat implements INavigat{
 
 class Sender implements ISender{
     Input(): void{
-        
+        let mail = $(".inPanel > p > #mail").val().toString();
+        let pass = $(".inPanel > p > pass").val().toString();
+        //let message = "ENTER+++++" + InCry(mail + '&' + pass);
+        let socket = new WebSocket("ws://188.227.86.17:4496");
+
     }
     Register(): void{
 

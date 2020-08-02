@@ -27,6 +27,7 @@ header > div > button{
     transition: 0.2s;
 }
 header > div > button:hover{ opacity: 0.6; }
+header > div > #exit { display: none; }
 header > div > img:hover{ transform: rotateY(180deg); }
 
 main{

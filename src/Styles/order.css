@@ -35,68 +35,72 @@ main{
     width: 100%;
     min-height: 100vh;
 }
-.imgsSlide > img{ width: 100%;  border-radius: 5px; transition: 0.4s;}
-.Gallery > img { width: 25%; border-radius: 5px;  cursor: pointer;}
-.text{
-    margin-top: 5%;
-}
-.text > li{
-    margin-top: 2%;
-    font-size: 130%;
-    font-style: italic;
-    color: dimgray;
-}
-.text > a > p{ color: dimgray; font-size: 140%; outline: none; text-align: center;}
-.titleText{
-    color: dimgray;
-    font-size: 170%;
+.headmdiv{
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
-.icons{ display: flex; }
-.description{
+.headmdiv > img{ border-radius: 5px; }
+.headmdiv > p{
     color: dimgray;
-    font-size: 130%;
+    font-size: 120%;
     font-style: italic;
 }
-/* .txtDropMenu{ text-align: center; }
-.txtDropMenu > p{
-    color: dimgray;
-    font-size: 130%;
-    cursor: pointer;
+#titleMain, #price{
+    font-size: 150%;
+    font-style: normal;
 }
-.dropMenu{
-    transition: 1s;
-    z-index: 2;
-    height: 0px;
+.mainmdiv {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
-.dropMenu > p{  opacity: 0; transition: 2s; color: dimgray; font-size: 120%; font-style: italic;} */
-
-.our{ color: dimgray; font-size: 170%; }
-.newS, .modS{ font-size: 150%; }
-.newS > li , .modS > li{ color: dodgerblue; }
-.newS > li > span, .modS > li > span { color: dimgray; }
-.panels > div{ display: flex; margin-left: auto; margin-right: auto; }
-.netShop, .vizit, .catalog, .coop, .program, .app, .updtDisgn, .chngStruct, .updtCont, .addFunc{ 
-    margin: auto; 
-    width: 50%; 
-    text-align: center; 
-    cursor: pointer; 
-    transition: 0.3s;
-}
-.netShop > img, .vizit > img, .catalog > img, .coop > img, .program > img, .app > img, .updtDisgn > img, 
-.chngStruct > img, .updtCont > img,
-.addFunc > img{
-    width: 35vh;
-    border-radius: 5px;
-}
-.titleSite{
+.mainmdiv > #questions {
+    text-align: left;
     color: dimgray;
     font-size: 150%;
+}
+.mainmdiv > #err, #msg { color: dodgerblue; font-size: 150%; }
+.mainmdiv > #msg { display: none; }
+
+#common, #modify { display: none; }
+#common > p, #modify > p {
+    color: dimgray;
+    font-size: 150%;
+}
+#common > input, #modify > input {
+    border: none;
+    border-bottom: 1px solid silver;
+    color: black;
+    font-size: 120%;
+    outline: none;
     font-style: italic;
+    transition: 0.4s;
+    text-align: center;
+}
+#common > input:focus, #modify > input:focus { border-bottom: 1px solid dodgerblue; }
+#common > textarea, #modify > textarea {
+    color: black;
+    font-size: 120%;
+    outline: none;
+    font-style: italic;
+    transition: 0.4s;
+}
+#common > textarea:focus, #modify > textarea:focus { border: 1px solid dodgerblue; }
+
+.mainmdiv > p > button {
+    background: transparent;
+    color: cornflowerblue;
+    font-size: 130%;
+    outline: none;
+    border: solid 1px cornflowerblue;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 
 footer{
+    margin-top: 2%;
     width: 100%;
     text-align: center;
     box-shadow: 0 0 5px;
@@ -110,6 +114,7 @@ footer{
 .cpright{
     margin-bottom: 0;
 }
+
 @media screen and (min-width:769px){
     /*header*/
     header > div{
@@ -128,10 +133,8 @@ footer{
         margin-left: auto;
         margin-right: auto;
     }
-    .icons > img{ margin: auto; }
-    .netShop:hover, .vizit:hover, .catalog:hover, .coop:hover, .program:hover, .app:hover,
-     .updtDisgn:hover, .chngStruct:hover, .updtCont:hover, .addFunc:hover{
-        transform: scale(1.1); 
+    .headmdiv > img{
+        width: 50%;
     }
 
     /*footer*/
@@ -145,9 +148,4 @@ footer{
         50% { transform: scale(1); }
         to { transform: scale(0.7); }
     }
-}
-
-
-@media screen and (max-device-width:480px) and (orientation: portrait){
-
 }
