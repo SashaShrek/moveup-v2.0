@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <link rel="stylesheet" href="src/Styles/why.css">
+        <script src="lib/React/react.dev.js"></script>
+        <script src="lib/React/react-dom.dev.js"></script>
+        <script src="lib/React/babel.js"></script>
+        <script src="lib/jQuery/jQuery.js"></script>
+        <link rel="shortcut icon" href="src/Images/logo.png" type="image/png">
+        <title>Зачем это нужно?</title>
+    </head>
+    <body onload="new Loader().Load()">
+        <div id="root"></div>
+        <script type="text/babel">
+        //header
+            class Header extends React.Component{
+                Create(){
+                    const hdiv = <div>
+                            <img src="src/Images/logo.png" alt="Logo"/>
+                            <p className="title">MOVEUP</p>
+                            <button>Главная</button>
+                            <button>Договор</button>
+                            <button>Корзина</button>
+                            <button id="autho">Авторизация</button>
+                        <button id="exit">Выйти</button>
+                        </div>;
+                    const hder = <header>{hdiv}</header>;
+                    return hder;
+                }
+                render(){
+                    return this.Create();
+                }
+            }
+        //main
+            class Main extends React.Component{
+                Create(){
+                    const textSite = <div className="textSite">
+                        <div className="imgsSlide">
+                                <img src="src/Images/sevenmain.jpg" alt=""/>
+                            </div>
+                            <h1>Для чего делается прикладное программное обеспечение?</h1>
+                            <h2>Прикладное программное обеспечение (ПО) предназначено для автоматизации 
+                                бизнес-процессов и рассчитано на непосредственное взаимодействие с пользователем.</h2>
+                            <h2>Наличие прикладного программного обеспечения для бизнеса играет важную роль.</h2>
+                            <h2>Оно используется в разных сферах бизнеса, например, ресторанный бизнес, фитнес 
+                                индустрия, сетевой маркетинг, банки и пр.</h2>
+                            <p>Прикладное ПО предоставляет широкие возможности в решении многих задач в:</p>
+                            <li>управлении компанией, например, склад, документооборот офиса;</li>
+                            <li>бухгалтерском учете, например, автоматизированная подготовка бухгалтерских документов 
+                                компании и их учета, формирование финансовой отчетности;</li>
+                            <li>анализе экономической деятельности, например, контроль и прогнозирование 
+                                ситуации в деятельности компании, анализ текущих событий.</li>
+                            <h3>Наша студия будет рада создать для Вашего бизнеса профессиональное прикладное 
+                                программное обеспечение с удобным интерфейсом. </h3>
+                        </div>;
+                    const dmain = <div>
+                            {textSite}
+                            
+                        </div>;
+                    return <main>{dmain}</main>;
+                }
+                render(){
+                    return this.Create();
+                }
+            }
+        //footer
+            class Footer extends React.Component{
+                Create(){
+                    const dftr = <div>
+                            <img src="src/Images/logo.png" alt=""/>
+                            <p className="policy">Политика конфиденциальности</p>
+                            <p className="phone"><li>Телефон: 8-950-366-27-38</li></p>
+                            <p className="email"><li>e-mail: Moveup2020@mail.ru</li></p>
+                            <a href='https://www.instagram.com/moveup_2020/'> <img src="src/Images/insta.png" alt=""/></a> 
+                            <a href='https://twitter.com/MOVEUP46774109'> <img src="src/Images/twiter.png" alt=""/></a> 
+                            <a href='https://www.facebook.com/pages/category/Website/MOVE-UP-%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%B2-106519261109857/'> <img src="src/Images/face.png" alt=""/></a> 
+                            <p className="cpright">Copyright © 2020 - MOVEUP</p>
+                        </div>;
+                    const ftr = <footer>{dftr}</footer>;
+                    return ftr;
+                }
+                render(){
+                    return this.Create();
+                }
+            }
+            ReactDOM.render(
+                <div><Header/><Main/><Footer/></div>,
+                document.getElementById("root")
+            )
+        </script>
+        <script type="text/javascript" src="src/Scripts/why.js"></script>
+    </body>
+</html>

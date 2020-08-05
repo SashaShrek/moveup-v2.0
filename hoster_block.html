@@ -11,7 +11,7 @@
         <link rel="shortcut icon" href="src/Images/logo.png" type="image/png">
         <title>Создание сайтов на заказ</title>
     </head>
-    <body onload="new Loader().Load()" alink="dimgray" vlink="dimgray" link="dimgray">
+    <body onload="new Loader().Load()" alink="dodgerblue" vlink="dodgerblue" link="dodgerblue">
         <div id="root"></div>
         <script type="text/babel">
         'use strict';
@@ -22,7 +22,7 @@
                         <img src="src/Images/logo.png" alt="Logo"/>
                         <p className="title">MOVEUP</p>
                         <button>Главная</button>
-                        <button>Соглашение</button>
+                        <button>Договор</button>
                         <button>Корзина</button>
                         <button id="autho">Авторизация</button>
                         <button id="exit">Выйти</button>
@@ -58,18 +58,20 @@
                             <img src="src/Images/dotnet.png" alt=""/>
                         </div>
                     const text = <div className="text">
-                            <h1 className="titleText">MOVEUP - это новое community в сфере разработки веб приложений</h1>
-                            <p className="description">Мы используем различные технологии (React, .NET Framework, Xamarin и другие) для достижения цели. 
-                                Простота использования, удобство и минимализм - вот основные принципы нашей работы. 
-                                Клиент находится в центре нашей бизнес-модели. Поэтому качество услуг и быстрота реагирования 
-                                на запросы клиента для нас являются одними из основных задач при выполнении заказов.</p>
+                            <h1 className="titleText">MOVE UP - студия разработки web-сайтов, мобильных приложений и прикладного программного обеспечения.</h1>
+                            <h2 className="description">Мы используем различные технологии (React, .NET Framework, Xamarin и другие) для достижения поставленной цели. 
+                                Простота использования, удобство и минимализм - основные принципы нашей работы. 
+                                Клиент находится в центре нашей бизнес-модели, поэтому качество услуг и быстрота реагирования 
+                                на запросы клиентов являются первоочередными задачами при выполнении заказов.</h2>
                             {icons}
                             <li>Мы гарантируем качество разработки и сможем оперативно осуществить модернизацию продукта, 
-                                так как создаём программное обеспечение исключительно под Ваши нужды.</li>
+                                так как создаем программное обеспечение исключительно под Ваш заказ.</li>
                             <li>Мы разрабатываем индивидуальный дизайн.</li>
                             <li>Наша команда - молодые специалисты, у которых "свежий" взгляд на мир, что позволяет делать 
-                                Web приложения, Android/iOS приложения и прикладное ПО современными и интересными.</li>
-                                <a href="why.html"><p>Зачем это нужно?</p></a>
+                                web-приложения, Android/iOS приложения и прикладное ПО современными и интересными.</li>
+                                <a href="why.html"><h2>Почему стоит создать свой сайт?</h2></a>
+                                <a href="why1.html"><h2>Зачем нужно мобильное приложение?</h2></a>
+                                <a href="why2.html"><h2>Для чего делается прикладное ПО?</h2></a>
                         </div>;
                     const hr = <hr size="1"></hr>;
                     const our = <p className="our">Наши услуги:</p>;
@@ -130,6 +132,7 @@
                             </div>
                         </div>;
                     const mdiv = <div>
+                            <img src="src/Images/sale.jpg" alt=""/>
                             {albom}
                             {text}
                             {hr}
@@ -152,6 +155,9 @@
                             <p className="policy">Политика конфиденциальности</p>
                             <p className="phone"><li>Телефон: 8-950-366-27-38</li></p>
                             <p className="email"><li>e-mail: Moveup2020@mail.ru</li></p>
+                            <a href='https://www.instagram.com/moveup_2020/'> <img src="src/Images/insta.png" alt=""/></a> 
+                            <a href='https://twitter.com/MOVEUP46774109'> <img src="src/Images/twiter.png" alt=""/></a> 
+                            <a href='https://www.facebook.com/pages/category/Website/MOVE-UP-%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%B2-106519261109857/'> <img src="src/Images/face.png" alt=""/></a> 
                             <p className="cpright">Copyright © 2020 - MOVEUP</p>
                         </div>;
                     const ftr = <footer>{dftr}</footer>;
