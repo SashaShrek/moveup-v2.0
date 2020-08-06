@@ -14,6 +14,7 @@ header{
     font-size: 150%;
     display: inline-block;
     vertical-align: middle;
+    color: dimgray;
 }
 header > div > button{
     margin: auto;
@@ -46,18 +47,20 @@ main{
     font-size: 120%;
     font-style: italic;
 }
-#titleMain, #price{
+#titleMain, #price, #newPrice{
     font-size: 150%;
     font-style: normal;
 }
+#newPrice { color: orangered; }
 .mainmdiv {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
 .mainmdiv > #questions {
-    text-align: left;
-    color: dimgray;
+    text-align: center;
+    color: dodgerblue;
+    font-style: italic;
     font-size: 150%;
 }
 .mainmdiv > #err, #msg { color: dodgerblue; font-size: 150%; }
@@ -89,15 +92,16 @@ main{
 #common > textarea:focus, #modify > textarea:focus { border: 1px solid dodgerblue; }
 
 .mainmdiv > p > button {
-    background: transparent;
-    color: cornflowerblue;
+    background-color: dodgerblue;
+    color: white;
     font-size: 130%;
     outline: none;
     border: solid 1px cornflowerblue;
     border-radius: 3px;
     cursor: pointer;
+    padding: 8px 16px;
 }
-
+.mainmdiv > p > button:hover{ background-color: rgb(30, 173, 255);}
 
 footer{
     margin-top: 2%;
@@ -109,6 +113,7 @@ footer{
 .policy{
     font-size: 130%;
     cursor: pointer;
+    color: dodgerblue;
 }
 .phone, .email{ font-size: 130%; }
 .cpright{

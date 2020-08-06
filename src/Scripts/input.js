@@ -41,7 +41,7 @@ var Navigat = /** @class */ (function () {
     Navigat.prototype.InputShow = function (bl) {
         $(".inPanel").css(bl ? { "display": "block" } : { "display": "none" });
         setTimeout(function () {
-            $(".inPanel").css(bl ? { "opacity": 1, "height": "150px" } :
+            $(".inPanel").css(bl ? { "opacity": 1, "height": "200px" } :
                 { "opacity": 0, "height": "0px" });
         }, 50);
         bl ? this.RegShow(false) : null;
@@ -49,7 +49,7 @@ var Navigat = /** @class */ (function () {
     Navigat.prototype.RegShow = function (bl) {
         $(".regPanel").css(bl ? { "display": "block" } : { "display": "none" });
         setTimeout(function () {
-            $(".regPanel").css(bl ? { "opacity": 1, "height": "100px" } :
+            $(".regPanel").css(bl ? { "opacity": 1, "height": "150px" } :
                 { "opacity": 0, "height": "0px" });
         }, 50);
         bl ? this.InputShow(false) : null;
@@ -86,11 +86,12 @@ var Sender = /** @class */ (function () {
         let mail = $(".regPanel > p > #mail").val();
         let pass = $(".regPanel > p > #pass").val();
         let repass = $(".regPanel > p > #repass").val();
+        let check = $("#check")[0];
         if(pass != repass) {
             $("#err").text("Пароли не совпадают!");
             return;
         }
-        if(name != "" && lastname != "" && mail != "" && pass != ""){
+        if(name != "" && lastname != "" && mail != "" && pass != "" && check.checked){
             let message = "REGISTER++" + InCry(name + '&' + lastname + '&' + mail + '&' + pass);
             let socket = new WebSocket("ws://188.227.86.17:4496");
             socket.onopen = () => {
@@ -103,7 +104,7 @@ var Sender = /** @class */ (function () {
                 }else $("#err").text("Пользователь существует!");
             };
         }else{
-            $("#err").text("Заполните все поля");
+            $("#err").text("Заполните все поля и прочтите политику конфиденциальности");
         }
     };
     return Sender;

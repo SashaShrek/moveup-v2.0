@@ -14,6 +14,7 @@ header{
     font-size: 150%;
     display: inline-block;
     vertical-align: middle;
+    color: dimgray;
 }
 header > div > button{
     margin: auto;
@@ -35,11 +36,16 @@ main{
     width: 100%;
     min-height: 100vh;
 }
-.textSite, .textApp, .textPO{ color: dimgray; }
+.textSite, .textApp, .textPO{ color: dimgray; text-align: justify; }
 .textSite > h1, .textApp > h1, .textPO > h1{
     text-align: center;
+    color: dodgerblue;
 }
-
+.textSite > h3{
+    color: dodgerblue;
+    text-align: center;
+}
+.imgsSlide > img{ width: 100%;  border-radius: 5px;}
 /*footer*/
 footer{
     width: 100%;
@@ -50,6 +56,7 @@ footer{
 .policy{
     font-size: 130%;
     cursor: pointer;
+    color: dodgerblue;
 }
 .phone, .email{ font-size: 130%; }
 .cpright{
@@ -78,6 +85,7 @@ footer{
 
     .textSite > p, .textApp > p, .textPO > p{
         font-size: 130%;
+        
     }
     .textSite > li, .textApp > li, .textPO > li{
         font-size: 130%;

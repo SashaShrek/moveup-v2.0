@@ -14,6 +14,7 @@ header{
     font-size: 150%;
     display: inline-block;
     vertical-align: middle;
+    color: dimgray;
 }
 header > div > button{
     margin: auto;
@@ -35,6 +36,7 @@ main{
     width: 100%;
     min-height: 100vh;
 }
+main > div > img {position: absolute; z-index: 3; text-align: left; margin-left: -19%;width: 18%;margin-top: 3%;}
 .imgsSlide > img{ width: 100%;  border-radius: 5px; transition: 0.4s;}
 .Gallery > img { width: 25%; border-radius: 5px;  cursor: pointer;}
 .text{
@@ -46,9 +48,11 @@ main{
     font-style: italic;
     color: dimgray;
 }
-.text > a > p{ color: dimgray; font-size: 140%; outline: none; text-align: center;}
+.text > a > h2{ font-size: 140%; outline: none; text-align: center; color: dodgerblue; }
+.text > a { text-decoration: none;}
+.text > a > h2:hover {color: orangered;}
 .titleText{
-    color: dimgray;
+    color: dodgerblue;
     font-size: 170%;
     text-align: center;
 }
@@ -56,7 +60,7 @@ main{
 .description{
     color: dimgray;
     font-size: 130%;
-    font-style: italic;
+    text-align: justify;
 }
 /* .txtDropMenu{ text-align: center; }
 .txtDropMenu > p{
@@ -100,6 +104,7 @@ footer{
 .policy{
     font-size: 130%;
     cursor: pointer;
+    color: dodgerblue;
 }
 .phone, .email{ font-size: 130%; }
 .cpright{

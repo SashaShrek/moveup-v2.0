@@ -69,6 +69,7 @@ footer{
 .policy{
     font-size: 130%;
     cursor: pointer;
+    color: dodgerblue;
 }
 .phone, .email{ font-size: 130%; }
 .cpright{
