@@ -41,37 +41,49 @@ class Navigator{
 
 class Data {
     GetData() {
-        let txt = "GETDATA+++" + InCry(localStorage.getItem("mlogin"));
+        let txt = "GETDATA+++" + localStorage.getItem("mlogin");
         let socket = new WebSocket("ws://188.227.86.17:4496");
         socket.onopen = function(){
             socket.send(txt);
         };
         socket.onmessage = event => {
+            alert(event.data)
             if(event.data != "False_") {
-                let onepart = event.data.split('/')[0];
-                let o = event.data.lastIndexOf('/');
-                o += 1;
-                let twopart = event.data.substr(o, event.data.length);
+                let arr = event.data.split('+');
+                let onepart = arr[0];
+                //alert(onepart)
+                let twopart = arr[1];
+                //alert(twopart)
                 let table = document.getElementById("table");
-                let j = 1;
-                let data = "";
-                let kl = 0;
-                table.insertRow(j);
-
-                data = onepart.split('&');
+                //table.insertRow(j);
+                let data = onepart.split('&');
                 let data1 = twopart.split('&');
-                while(j <= data.length){
-                    let new_row = table.insertRow(j);
-                    let new_cell = new_row.insertCell(0);
-                    let new_text = document.createTextNode(data[j - 1]);
-                    new_cell.appendChild(new_text);
-                    table.rows[j].cells[0].style.cursor = "pointer";
-
-                    new_cell = new_row.insertCell(1);
-                    new_text = document.createTextNode(data1[j - 1]);
-                    new_cell.appendChild(new_text);
+                let j = 0;
+                let n = data.length - 1;
+                while(j < n){
+                    let row = table.insertRow(j + 1);
+                    let cell = row.insertCell(0);
+                    let text = document.createTextNode(data[j]);
+                    cell.appendChild(text);
+                    cell = row.insertCell(1);
+                    text = document.createTextNode(data1[j]);
+                    cell.appendChild(text);
                     j++;
                 }
+                //data = onepart.split('&');
+                //let data1 = twopart.split('&');
+                // while(j <= data.length){
+                //     let new_row = table.insertRow(j);
+                //     let new_cell = new_row.insertCell(0);
+                //     let new_text = document.createTextNode(data[j - 1]);
+                //     new_cell.appendChild(new_text);
+                //     table.rows[j].cells[0].style.cursor = "pointer";
+
+                //     new_cell = new_row.insertCell(1);
+                //     new_text = document.createTextNode(data1[j - 1]);
+                //     new_cell.appendChild(new_text);
+                //     j++;
+                // }
             }
         };
     }
