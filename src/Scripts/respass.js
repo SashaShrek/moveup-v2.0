@@ -12,6 +12,7 @@ var Loader = /** @class */ (function () {
             "hoster_block.html",
             "help.html",
             "busket.html",
+            "http://188.227.86.17/App/com.companyname.moveup.apk",
             "input.html"
         ];
         let i = 0;
@@ -20,7 +21,7 @@ var Loader = /** @class */ (function () {
             $("#root > div > header > div > button")[i].addEventListener("click", function () { return navigator.Go(page); });
             i++;
         };
-        while (i <= 3) {
+        while (i <= 4) {
             _loop_2();
         }
         $(".mdiv > p > button")[0].addEventListener("click", function () { return new Req().Reset(); });

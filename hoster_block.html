@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <meta name="viewport">
         <meta name="yandex-verification" content="c80ec565479b1e46"/>
         <link rel="canonical" href="http://moveup2020.ru/hoster_block.html"/>
         <meta name="Description" content="Студия разработки web-сайтов, мобильных приложений и прикладного программного обеспечения."/>
@@ -27,6 +27,7 @@
                         <button>Главная</button>
                         <button>Договор</button>
                         <button>Корзина</button>
+                        <button>Наше приложение</button>
                         <button id="autho">Авторизация</button>
                         <button id="exit">Выйти</button>
                     </div>;
@@ -134,6 +135,18 @@
                                 </div>
                             </div>
                         </div>;
+
+                    const msg = <div className="msg">
+                            <p>Добро пожаловать!</p>
+                            <p>Вы зашли на этот сайт со смартфона</p>
+                            <p>Для Вашего удобства мы создали приложение</p>
+                            <p><a href="http://188.227.86.17/App/com.companyname.moveup.apk">Приложение для Android</a></p>
+                            <p><a href="http://188.227.86.17/App/com.companyname.moveup.apk" target="_blank">
+                                <img src="http://qrcoder.ru/code/?http%3A%2F%2F188.227.86.17%2FApp%2Fcom.companyname.moveup.apk&4&0" width="300" height="300" border="0" title="QR код"/>
+                                </a></p>
+                            <p><button>Использовать сайт</button></p>
+                        </div>;
+
                     const mdiv = <div>
                             <img src="src/Images/sale.jpg" alt=""/>
                             {albom}
@@ -143,7 +156,7 @@
                             {newS}
                             {panels}
                         </div>;
-                    const mn = <main>{mdiv}</main>;
+                    const mn = <main>{msg}{mdiv}</main>;
                     return mn;
                 }
                 render(){

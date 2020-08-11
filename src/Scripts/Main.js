@@ -25,6 +25,7 @@ var Loader = /** @class */ (function () {
             "hoster_block.html",
             "help.html",
             "busket.html",
+            "http://188.227.86.17/App/com.companyname.moveup.apk",
             "input.html"
         ];
         i = 0;
@@ -33,7 +34,7 @@ var Loader = /** @class */ (function () {
             $("#root > div > header > div > button")[i].addEventListener("click", function () { return navigator.Go(page); });
             i++;
         };
-        while (i <= 3) {
+        while (i <= 4) {
             _loop_2();
         }
         if (localStorage.getItem("mlogin") != null) {
@@ -77,6 +78,14 @@ var Loader = /** @class */ (function () {
         };
         while (i < n) {
             _loop_3();
+        }
+
+        //IsPhone
+        if (window.matchMedia("(max-device-width:480px) and (orientation: portrait)").matches){
+            $("main > div").css("display", "none");
+            $("header > div").css("display", "none");
+            $("main > .msg").css("display", "block");
+            $("header > meta").attr("content", "width=device-width, initial-scale=1");
         }
     };
     return Loader;

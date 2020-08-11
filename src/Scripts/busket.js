@@ -9,14 +9,15 @@ class Loader{
     Events(){
         //navigator
         let navigator = new Navigator();
-        let data = [
+        var data = [
             "hoster_block.html",
             "help.html",
             "busket.html",
+            "http://188.227.86.17/App/com.companyname.moveup.apk",
             "input.html"
         ];
         let i = 0;
-        while(i <= 3){
+        while(i <= 4){
             let page = data[i];
             $("#root > div > header > div > button")[i].addEventListener("click", () => navigator.Go(page));
             i++;
@@ -47,7 +48,6 @@ class Data {
             socket.send(txt);
         };
         socket.onmessage = event => {
-            alert(event.data)
             if(event.data != "False_") {
                 let arr = event.data.split('+');
                 let onepart = arr[0];
