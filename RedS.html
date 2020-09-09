@@ -77,7 +77,7 @@
     <script type="text/javascript">
       var socket = new WebSocket("ws://188.227.86.17:4496");
       function GetData(){
-        let mail = InCry(document.getElementById("mail").value);
+        let mail = document.getElementById("mail").value;
         let text = "GETINFO+++" + mail;
         socket.send(text);
         socket.onmessage = function(event){
@@ -92,7 +92,7 @@
             });
 
             let data = event.data;
-            data = COutCry(data);
+            data = data;
             let types = data.split('/')[0];
             let s = data.lastIndexOf('/');
             s += 1;
@@ -132,7 +132,7 @@
       function SendData(){
         let dat = document.getElementById("mail").value + '&' + document.getElementById("one").options[document.getElementById("one").selectedIndex].text + '&'
         + (document.getElementById("check").checked == true ? '!' : '') + document.getElementById("three").options[document.getElementById("three").selectedIndex].text;
-        let data = "NEWINFO+++" + InCry(dat);
+        let data = "NEWINFO+++" + dat;
         socket.send(data);
         socket.onmessage = null;
         socket.onmessage = function(ev){
@@ -147,7 +147,7 @@
       }
       function loadRedS(){
         let nameUser = localStorage.getItem("mlogin");
-        if(nameUser != "JMatyushina@mail.ru"){
+        if(nameUser != "JMatyushina@mail.ru" && nameUser != "jmatyushin@gmail.com"){
           document.getElementById('mn').style.display = "none";
           alert("Кажется, вы не админ. Adios");
           window.history.back();

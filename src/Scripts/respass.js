@@ -12,8 +12,8 @@ var Loader = /** @class */ (function () {
             "hoster_block.html",
             "help.html",
             "busket.html",
-            "http://188.227.86.17/App/com.companyname.moveup.apk",
-            "input.html"
+            "input.html",
+            "Works.html"
         ];
         let i = 0;
         var _loop_2 = function () {

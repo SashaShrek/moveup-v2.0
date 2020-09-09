@@ -12,8 +12,8 @@ var Loader = /** @class */ (function () {
             "hoster_block.html",
             "help.html",
             "busket.html",
-            "http://188.227.86.17/App/com.companyname.moveup.apk",
-            "input.html"
+            "input.html",
+            "Works.html"
         ];
         var i = 0;
         var _loop_1 = function () {
@@ -67,7 +67,7 @@ var Sender = /** @class */ (function () {
             $("#err").text("Заполните все поля");
             return;
         }
-        let message = "ENTER+++++" + InCry(mail + '&' + pass);
+        let message = "ENTER+++++" + mail + '&' + pass;
         let socket = new WebSocket("ws://188.227.86.17:4496");
         socket.onopen = () => {
             socket.send(message);
@@ -93,7 +93,7 @@ var Sender = /** @class */ (function () {
             return;
         }
         if(name != "" && lastname != "" && mail != "" && pass != "" && check.checked){
-            let message = "REGISTER++" + InCry(name + '&' + lastname + '&' + mail + '&' + pass);
+            let message = "REGISTER++" + name + '&' + lastname + '&' + mail + '&' + pass;
             let socket = new WebSocket("ws://188.227.86.17:4496");
             socket.onopen = () => {
                 socket.send(message);

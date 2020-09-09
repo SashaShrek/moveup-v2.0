@@ -25,8 +25,8 @@ var Loader = /** @class */ (function () {
             "hoster_block.html",
             "help.html",
             "busket.html",
-            "http://188.227.86.17/App/com.companyname.moveup.apk",
-            "input.html"
+            "input.html",
+            "Works.html"
         ];
         i = 0;
         var _loop_2 = function () {
@@ -86,6 +86,11 @@ var Loader = /** @class */ (function () {
             $("header > div").css("display", "none");
             $("main > .msg").css("display", "block");
             $("header > meta").attr("content", "width=device-width, initial-scale=1");
+            $(".msg > p > button")[0].addEventListener("click", function (){
+                $("main > div").css("display", "block");
+            $("header > div").css("display", "flex");
+            $("main > .msg").css("display", "none");
+            });
         }
     };
     return Loader;

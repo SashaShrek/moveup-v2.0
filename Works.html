@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="src/Styles/works.css">
+        <script src="lib/React/react.dev.js"></script>
+        <script src="lib/React/react-dom.dev.js"></script>
+        <script src="lib/React/babel.js"></script>
+        <script src="lib/jQuery/jQuery.js"></script>
+        <link rel="shortcut icon" href="src/Images/logo.png" type="image/png">
+        <title>Наши работы</title>
+    </head>
+    <body onload="new LoadPage().OnLoad()">
+        <div id="root"></div>
+        <script type="text/babel">
+            'use strict';
+            class Header extends React.Component {
+                Create(){
+                    const hdiv = <div>
+                        <img src="src/Images/logo.png" alt="Logo"/>
+                        <p className="title">MOVEUP</p>
+                        <button>Главная</button>
+                        <button>Договор</button>
+                        <button>Корзина</button>
+                        <button id="autho">Авторизация</button>
+                        <button>Портфолио</button>
+                        <button id="exit">Выйти</button>
+                    </div>;
+                    const hder = <header>{hdiv}</header>;
+                    return hder;
+                }
+                render(){
+                    return this.Create();
+                }
+            }
+            class Main extends React.Component {
+                Create(){
+                    const panel1 = <div className="panel1">
+                            <p><img id="fac" src="src/Images/fac1.jpg" alt="Картинка"/></p>
+                            <p id="title">Facile. Система автоматизации</p>
+                            <hr color="Silver" size="1"/>
+                            <p id="opis">Данная программа состоит из 8 частей - для каждого направления в ресторанном 
+                                бизнесе (официант, администратор, бухгалтер, склад, хостес, кассир и т.д.). 
+                                Должна была заменить всем (почти) известный R-Keeper и частично 1С.</p>
+                        </div>;
+                    const panel2 = <div className="panel2">
+                        <p><img id="prec" src="src/Images/prec1.jpg" alt="Картинка"/></p>
+                        <p id="title">Precession</p>
+                        <hr color="Silver" size="1"/>
+                        <p id="opis">Основная функция: объединить множество магазинов в одной экосистеме, 
+                            организовать систему скидок через реферальные ссылки и дать возможность зарабатывать 
+                            через систему кэшбэков. Приложение для ограниченного круга лиц.</p>
+                        </div>;
+                    const pflex1 = <div className="pflex1">
+                            {panel1}
+                            {panel2}
+                        </div>;
+                    const panel3 = <div className="panel3">
+                            <p><img id="law" src="src/Images/law1.jpg" alt="Картинка"/></p>
+                            <p id="title">LawOne</p>
+                            <hr color="Silver" size="1"/>
+                            <p id="opis">Сайт для юридической помощи по сопровождению исполнительного производства.</p>
+                        </div>;
+                    const panel4 = <div className="panel4">
+                            <p><img id="moveup" src="src/Images/moveup1.jpg" alt="Картинка"/></p>
+                            <p id="title">Moveup. Приложение для Android</p>
+                            <hr color="Silver" size="1"/>
+                            <p id="opis">Создано для удобства и по следованию тенденциям. 
+                                Выполняет те же функции, что и сайт Moveup.</p>
+                        </div>;
+                    const pflex2 = <div className="pflex2">
+                            {panel3}
+                            {panel4}
+                        </div>;
+                    const panel5 = <div className="panel5">
+                            <p><img id="movef" src="src/Images/movef1.jpg" alt="Картинка"/></p>
+                            <p id="title">Movef</p>
+                            <hr color="Silver" size="1"/>
+                            <p id="opis">Небольшое хранилище данных с возможностью закачивать любые файлы 
+                                и делиться ими с другими людьми. Имеет аналог на Windows, 
+                                что даёт мгновенную синхронизацию между телефоном и ПК/лэптопом. Файлы других людей 
+                                (к которым они дали доступ) можно скачивать и работать с ними локально.</p>
+                        </div>;
+                    const panel6 = <div className="panel6">
+                            <p><img id="task" src="src/Images/task1.jpg" alt="Картинка"/></p>
+                            <p id="title">FacileTask</p>
+                            <hr color="Silver" size="1"/>
+                            <p id="opis">Задачник/Органайзер на каждый день</p>
+                        </div>;
+                    const pflex3 = <div className="pflex3">
+                            {panel5}
+                            {panel6}
+                        </div>;
+                    const panel7 = <div className="panel7">
+                            <p><img id="hand" src="src/Images/hand1.jpg" alt="Картинка"/></p>
+                            <p id="title">FOUR HANDS Массаж</p>
+                            <hr color="Silver" size="1"/>
+                            <p id="opis">Сайт предоставляющий услуги массажа в Нижнем Новгороде</p>
+                            <p id="opis">Семейная пара предлагает Вам услуги оздоровительного классического 
+                                массажа всех зон, услуги антицеллюлитного массажа.</p>
+                        </div>;
+                    const pflex4 = <div className="pflex4">
+                            {panel7}
+                        </div>;
+                    const mdiv = <div>
+                            {pflex1}
+                            {pflex2}
+                            {pflex3}
+                            {pflex4}
+                        </div>;
+                    return <main>{mdiv}</main>;
+                }
+                render(){
+                    return this.Create();
+                }
+            }
+            class Footer extends React.Component{
+                Create(){
+                    const dftr = <div>
+                            <img src="src/Images/logo.png" alt=""/>
+                            <p className="policy"><a href="Policy.html">Политика конфиденциальности</a></p>
+                            <p className="phone"><li>Телефон: 8-950-366-27-38</li></p>
+                            <p className="email"><li>e-mail: Moveup2020@mail.ru</li></p>
+                            <a href='https://www.instagram.com/moveup_2020/'> <img src="src/Images/insta.png" alt=""/></a> 
+                            <a href='https://twitter.com/MOVEUP46774109'> <img src="src/Images/twiter.png" alt=""/></a> 
+                            <a href='https://www.facebook.com/pages/category/Website/MOVE-UP-%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%B2-106519261109857/'> <img src="src/Images/face.png" alt=""/></a> 
+                            <p className="cpright">Copyright © 2020 - MOVEUP</p>
+                        </div>;
+                    const ftr = <footer>{dftr}</footer>;
+                    return ftr;
+                }
+                render(){
+                    return this.Create();
+                }
+            }
+            ReactDOM.render(<div><Header/><Main/><Footer/></div>, document.getElementById("root"));
+        </script>
+        <script type="text/javascript" src="src/Scripts/works.js"></script>
+    </body>
+</html>
